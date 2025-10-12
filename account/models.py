@@ -47,7 +47,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10,null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
-    Nationality = models.CharField(max_length=30, null=True, blank=True)
+    nationality = models.CharField(max_length=30, null=True, blank=True)
     
 
     objects = CustomUserManager()

@@ -1,0 +1,12 @@
+Student Import Log
+==================================================
+
+Created user: Princella Nkansah (72149228) with password 9793
+Created user: Mikayla Osae Asante (41602428) with password 8001
+Created user: Homey Benedict Harrison (91379130) with password 1619
+Created user: Precious Mamle Fosu (89317665) with password 7164
+Created user: God's Brin Nimaffull (19195885) with password 8428
+Created user: Christodia Tonette Boah (98559760) with password 9088
+Created user: Joel Kofi Biney (13487199) with password 7499
+
+Import Completed.

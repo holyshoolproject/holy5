@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'student.apps.StudentConfig',
     'staff.apps.StaffConfig',
     'principal.apps.PrincipalConfig',
+    'fees.apps.FeesConfig',
 
 
 
@@ -117,11 +118,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+import os
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -130,3 +134,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL  = 'account.User' 
+
+
+JAZZMIN_SETTINGS = {
+    "custom_css": "css/custom.css",
+    "site_title": "School Management System",
+    "site_header": "School Management Admin",
+    "welcome_sign": "Welcome to the School Management Dashboard",
+    "theme": "cosmo",  # try others: 'flatly', 'cyborg', 'pulse', 'minty', etc.
+    "show_ui_builder": True,  # allows live theme tweaking in the UI
+}
+
+
+
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "cosmo",  # base theme
+
+}
+
+
+MNOTIFY_API_KEY = "PbaAXEQmt7R7i7apnauFMMwFD"
+MNOTIFY_SENDER_ID = "King Of Glory School"  # customize as needed
+MNOTIFY_URL = "https://api.mnotify.com/api/sms/quick"

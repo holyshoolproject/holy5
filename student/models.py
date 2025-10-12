@@ -50,6 +50,8 @@ class StudentProfile(models.Model):
     contact_of_father =  models.CharField(max_length=100, null=True, blank=True)
     contact_of_mother =  models.CharField(max_length=100, null=True, blank=True)
 
+    house_number =  models.CharField(max_length=100, null=True, blank=True)
+
     def __str__(self):
         return self.user.full_name 
 
@@ -108,7 +110,7 @@ class Term(models.Model):
     academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.name} - {self.academic_year}"
+        return f"{self.name} - ({self.academic_year})"
 
 
 
@@ -183,79 +185,3 @@ class StudentSubjectRecord(models.Model):
 
 
 
-# --------------------- FEE STRUCTURE ---------------------
-
-from django.utils import timezone
-
-
-# -----------------------
-# FEE STRUCTURE
-# -----------------------
-class FeeStructure(models.Model):
-    academic_year = models.ForeignKey("AcademicYear", on_delete=models.CASCADE)
-    grade_class = models.ForeignKey("GradeClass", on_delete=models.CASCADE)
-    term = models.ForeignKey("Term", on_delete=models.CASCADE)
-    amount = models.DecimalField(max_digits=10, decimal_places=2)  # e.g. 1200.00
-
-    class Meta:
-        unique_together = ('academic_year', 'grade_class', 'term')
-
-    def __str__(self):
-        return f"{self.grade_class} - {self.term} ({self.academic_year}) — {self.amount} GHS"
-
-
-# -----------------------
-# STUDENT FEE RECORD
-# -----------------------
-class StudentFeeRecord(models.Model):
-    student = models.ForeignKey("StudentProfile", on_delete=models.CASCADE)
-    fee_structure = models.ForeignKey(FeeStructure, on_delete=models.CASCADE)
-    amount_paid = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    is_fully_paid = models.BooleanField(default=False)
-
-    class Meta:
-        unique_together = ('student', 'fee_structure')
-
-    def __str__(self):
-        fs = self.fee_structure
-        return f"{self.student.user.full_name} - {fs.term} ({fs.academic_year})"
-
-    def save(self, *args, **kwargs):
-        # Automatically calculate balance and full payment status
-        self.balance = self.fee_structure.amount - self.amount_paid
-        self.is_fully_paid = self.balance <= 0
-        super().save(*args, **kwargs)
-
-    def total_arrears(self):
-        """
-        Total unpaid fees across all terms in the same academic year.
-        """
-        fs = self.fee_structure
-        arrears = StudentFeeRecord.objects.filter(
-            student=self.student,
-            fee_structure__academic_year=fs.academic_year,
-            balance__gt=0
-        ).exclude(id=self.id)
-        return sum(r.balance for r in arrears)
-
-
-# -----------------------
-# PAYMENT MODEL
-# -----------------------
-class Payment(models.Model):
-    student_fee_record = models.ForeignKey(StudentFeeRecord, on_delete=models.CASCADE, related_name="payments")
-    date = models.DateField(default=timezone.now)
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
-    payment_method = models.CharField(max_length=50, blank=True, null=True)  # e.g. Cash, MOMO, Bank
-    reference = models.CharField(max_length=50, blank=True, null=True, unique=True)
-
-    def __str__(self):
-        return f"{self.student_fee_record.student.user.full_name} - {self.amount} GHS"
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        # Update total payments and balances
-        record = self.student_fee_record
-        record.amount_paid = sum(p.amount for p in record.payments.all())
-        record.save()

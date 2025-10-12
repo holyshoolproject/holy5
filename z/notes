@@ -1,1 +1,22 @@
 all students must have a fee record at the begining of each term
+
+
+creating a student fee structure must auto create a student fee records based on 
+student term records
+
+✅ Best practice:
+Always use YYYY-MM-DD (ISO format) in your Excel file — it’s the safest and most reliable for imports.
+Example:
+
+2025-10-11
+
+4 . Teachers are to create Student term records manually (i'll fix this by ... creating a new term should creat Student term records automatically )
+
+
+
+
+
+
+
+priscilla dad: 249891601
+mom: 5414805333

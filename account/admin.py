@@ -11,7 +11,7 @@ class UserAdmin(BaseUserAdmin):
         "role",
         "gender",
         "date_of_birth",
-        "Nationality",
+        "nationality",
         "is_active",
         "is_staff",
     )
@@ -28,7 +28,7 @@ class UserAdmin(BaseUserAdmin):
     # Fieldsets define how fields appear in the detail form
     fieldsets = (
         (None, {"fields": ("user_id", "password")}),
-        ("Personal info", {"fields": ("full_name", "gender", "date_of_birth", "Nationality")}),
+        ("Personal info", {"fields": ("full_name", "gender", "date_of_birth", "nationality")}),
         ("Role info", {"fields": ("role",)}),
         ("Permissions", {"fields": ("is_active", "is_staff", "is_superuser", "groups", "user_permissions")}),
         ("Important dates", {"fields": ("last_login",)}),
@@ -40,7 +40,7 @@ class UserAdmin(BaseUserAdmin):
             None,
             {
                 "classes": ("wide",),
-                "fields": ("user_id", "role", "full_name", "gender", "date_of_birth", "Nationality", "password1", "password2"),
+                "fields": ("user_id", "role", "full_name", "gender", "date_of_birth", "nationality", "password1", "password2"),
             },
         ),
     )
