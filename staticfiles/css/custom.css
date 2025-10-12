@@ -1,0 +1,4 @@
+select, option, .select2-selection__rendered, .select2-results__option {
+    background-color: #62b122  !important;
+    color: #ffffff  !important;
+}
