@@ -84,14 +84,17 @@ def send_sms(recipient, message):
 # -----------------------------
 # Student Fee Record Model
 # -----------------------------
+
 class StudentFeeRecord(models.Model):
     student = models.ForeignKey(StudentProfile, on_delete=models.CASCADE)
     fee_structure = models.ForeignKey(FeeStructure, on_delete=models.CASCADE)
     amount_paid = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     is_fully_paid = models.BooleanField(default=False)
+    date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        ordering = ['-date_created']
         verbose_name = 'Student Fee Record'
         verbose_name_plural = 'Student Fee Records'
         unique_together = ('student', 'fee_structure')
