@@ -184,4 +184,4 @@ class Payment(models.Model):
             # Send SMS asynchronously so it doesn't block the save
             if parent_phone:
                 print("Sending SMS...")
-                Thread(target=send_sms, args=(parent_phone, message)).start()
+                #Thread(target=send_sms, args=(parent_phone, message)).start()
