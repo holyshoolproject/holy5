@@ -4,7 +4,20 @@ from django.urls import reverse
 from django.utils.html import escape, format_html
 from django.utils.safestring import mark_safe
 
-from .models import FeeStructure, StudentFeeRecord, Payment
+from .models import FeeStructure, StudentFeeRecord, Payment, AcademicYear, Term, GradeClass
+
+
+
+@admin.register(AcademicYear)
+class AcademicYearAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    search_fields = ("name",)
+
+@admin.register(Term)
+class TermAdmin(admin.ModelAdmin):
+    list_display = ("name", "academic_year")
+    list_filter = ("name", "academic_year")
+    search_fields = ("name",)
 
 
 

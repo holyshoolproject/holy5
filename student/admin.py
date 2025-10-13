@@ -28,16 +28,9 @@ class GradeClassAdmin(admin.ModelAdmin):
     list_filter = ("name",)
     search_fields = ("name",)
 
-@admin.register(AcademicYear)
-class AcademicYearAdmin(admin.ModelAdmin):
-    list_display = ("name",)
-    search_fields = ("name",)
 
-@admin.register(Term)
-class TermAdmin(admin.ModelAdmin):
-    list_display = ("name", "academic_year")
-    list_filter = ("name", "academic_year")
-    search_fields = ("name",)
+
+
 
 @admin.register(StudentTermRecord)
 class StudentTermRecordAdmin(admin.ModelAdmin):
