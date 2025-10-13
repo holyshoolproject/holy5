@@ -67,7 +67,7 @@ class Command(BaseCommand):
                     )
 
                     # Log only new user creation with ID and password
-                    message = f"Created user: {user.full_name} ({user.user_id}) with password {password}"
+                    message = f"Name: {user.full_name}. ID: {user.user_id} PIN: {password}"
                     print(message)
                     log_file.write(message + "\n")
 
