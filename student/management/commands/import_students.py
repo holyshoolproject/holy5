@@ -9,6 +9,19 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 from student.models import StudentProfile
 
+def clean_phone(value):
+    if pd.isna(value):
+        return None
+    # Convert to string and strip decimals
+    value = str(value).strip()
+    if value.endswith('.0'):
+        value = value[:-2]
+    # Ensure it keeps the leading zero if missing
+    if not value.startswith('0') and len(value) == 9:
+        value = '0' + value
+    return value
+
+
 class Command(BaseCommand):
     help = 'Import students from Excel and update their profiles'
 
@@ -63,8 +76,10 @@ class Command(BaseCommand):
                         date_of_birth=row.get('date_of_birth'),
                         nationality=row.get('nationality'),
                         role=row.get('role', 'student'),
-                        password=password  # Django will hash automatically if you override save()
-                    )
+                             )
+                    user.set_password(password)
+                    user.save()
+
 
                     # Log only new user creation with ID and password
                     message = f"Name: {user.full_name}. ID: {user.user_id} PIN: {password}"
@@ -92,8 +107,12 @@ class Command(BaseCommand):
                     profile.occupation_of_mother = row.get('occupation_of_mother')
                     profile.nationality_of_father = row.get('nationality_of_father')
                     profile.nationality_of_mother = row.get('nationality_of_mother')
-                    profile.contact_of_father = row.get('contact_of_father')
-                    profile.contact_of_mother = row.get('contact_of_mother')
+                    
+                    profile.contact_of_father = clean_phone(row.get('contact_of_father'))
+                    profile.contact_of_mother = clean_phone(row.get('contact_of_mother'))
+
+
+                    
                     profile.house_number = row.get('house_number')
                     profile.save()
                 except StudentProfile.DoesNotExist:
