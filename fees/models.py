@@ -163,7 +163,7 @@ class Payment(models.Model):
 
             # Prepare SMS message
             student = record.student
-            parent_phone = student.contact_of_father  # Make sure this field exists in StudentProfile
+            parent_phone = student.contact_of_father  
 
             if record.balance > 0:
                 payment_status = "part payment"

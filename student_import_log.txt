@@ -36,3 +36,26 @@ Name: Emmanuel Annan. ID: 16719311 PIN: 6378
 Name: Josephine Dadzie. ID: 29652788 PIN: 2474
 
 Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Dorinda Abena N. A.. ID: 27204156 PIN: 7620
+Name: Jayden Amon Quaye. ID: 33303745 PIN: 6753
+Name: Ann Ofosu. ID: 23712557 PIN: 7866
+Name: Erica Appea-Apreku Owiredu. ID: 38278777 PIN: 9095
+Name: Twerenyame Boakye Gyan Sekyere. ID: 38957100 PIN: 5574
+Name: Daniel Adu Ampofo. ID: 68602187 PIN: 2464
+Name: Juliana Opamfowa Sam Arthur. ID: 33481164 PIN: 3388
+Name: Fred Nshyraba Obeng. ID: 53792804 PIN: 5127
+Name: Chief Amoanyi Quansah. ID: 47893305 PIN: 7859
+Name: Gabriel Anti Dadzie. ID: 51461687 PIN: 8613
+Name: Mildred Illyn Appah-Kum. ID: 31240884 PIN: 7977
+Name: Maame Esi Ansekua Amoaku. ID: 76716537 PIN: 5612
+Name: Prince Ganyo. ID: 14645490 PIN: 2058
+Name: Christabel Arkoh. ID: 82496511 PIN: 2538
+Name: Neriah Nana Efya Bassoah. ID: 31760248 PIN: 8841
+Name: Michealina Ganyo. ID: 20660996 PIN: 8291
+Name: Erica Ganyo. ID: 98214342 PIN: 4776
+
+Import Completed.
