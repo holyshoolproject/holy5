@@ -17,3 +17,9 @@ Example:
 6. sms deactivated for now.
 priscilla dad: 0249891601
 mom: 5414805333
+
+steps to pay
+1. create student term record
+2. confirm fee stucture exist (creating it will auto create a student fee record)
+3. manually create fee structure records
+3. 

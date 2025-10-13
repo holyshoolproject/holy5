@@ -21,7 +21,7 @@ class FeeStructureAdmin(admin.ModelAdmin):
 @admin.register(StudentFeeRecord)
 class StudentFeeRecordAdmin(admin.ModelAdmin):
     list_display = ("student", "fee_structure", "amount_paid", "balance", "is_fully_paid")
-    list_filter = ("fee_structure__academic_year", "fee_structure__term", "is_fully_paid")
+    list_filter = ("fee_structure__academic_year", "fee_structure__term", "is_fully_paid", "fee_structure")
     search_fields = ("student__user__full_name", "fee_structure__grade_class__name")
     ordering = ("student",)
     readonly_fields = ("balance", "is_fully_paid")
