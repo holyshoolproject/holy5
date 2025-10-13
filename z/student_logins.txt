@@ -1,4 +1,5 @@
-
+Student Import Log
+==================================================
 
 Created user: Princella Nkansah (16548658) with password 9708
 Created user: Mikayla Osae Asante (51610426) with password 3147
@@ -21,15 +22,11 @@ Created user: Jason Asare - Asiedu (76300765) with password 3744
 Created user: Hannah Agboba (82841428) with password 8794
 Created user: Hannah Agboba (82841428) with password 8794
 
+
+
+
+
 Created user: Emmanuella Quaicoe (15693413) with password 3687
 Created user: Henry Amoasie (68971772) with password 3226
-Created user: Micheal Anakwah Kyei (80272612) with password 9907
-Created user: Heward Nana Nkaso Sule (67075381) with password 4826
-Created user: Rebecca Okyere (37151259) with password 2872
-Created user: Mikayla Yireh Adjei (57617070) with password 2136
-Created user: Pricsla Mensah (40634901) with password 8415
-Created user: Richiel Owusua Hammond (29088450) with password 5852
-Created user: Goodluck Solomon Asherow (31785910) with password 8504
-Created user: Patrick K. Asare (26811315) with password 2499
-Created user: Kelvin Fiifi Sam (88418449) with password 2080
 
+Import Completed.

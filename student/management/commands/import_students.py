@@ -24,44 +24,53 @@ class Command(BaseCommand):
 
         # Open a log file to write the output
         log_file_path = os.path.join(settings.BASE_DIR, 'student_import_log.txt')
-        with open(log_file_path, 'w', encoding='utf-8') as log_file:
+        with open(log_file_path, 'a', encoding='utf-8') as log_file:
 
-            log_file.write("Student Import Log\n")
+            log_file.write("\nStudent Import Log\n")
+
             log_file.write("="*50 + "\n\n")
 
             for index, row in df.iterrows():
-                # Generate or get a valid 8-digit user_id (not all zeros)
-                user_id = str(row.get('user_id', '')).zfill(8)
-                if len(user_id) != 8 or not user_id.isdigit() or user_id == '00000000':
+                full_name = str(row.get('full_name', '')).strip()
+
+                # Check if a user with this full name already exists
+                user = User.objects.filter(full_name__iexact=full_name).first()
+
+                if user:
+                    print(f"User {full_name} already exists, profile updated")
+                    # Update existing user details
+                    user.gender = row.get('gender', user.gender)
+                    user.date_of_birth = row.get('date_of_birth', user.date_of_birth)
+                    user.nationality = row.get('nationality', user.nationality)
+                    user.role = row.get('role', user.role)
+                    user.save()
+
+                else:
+                    # Generate new unique 8-digit user_id
                     while True:
                         user_id = str(random.randint(10000001, 99999999))
                         if not User.objects.filter(user_id=user_id).exists():
                             break
 
-                # Generate 4-digit random pin/password
-                password = str(random.randint(1000, 9999))
+                    # Generate 4-digit random pin/password
+                    password = str(random.randint(1000, 9999))
 
-                # Create user if it doesn't exist
-                user, created = User.objects.get_or_create(
-                    user_id=user_id,
-                    defaults={
-                        'full_name': row.get('full_name', 'Unknown'),
-                        'gender': row.get('gender'),
-                        'date_of_birth': row.get('date_of_birth'),
-                        'nationality': row.get('nationality'),
-                        'role': row.get('role', 'student'),
-                        'password': password  # will be hashed automatically
-                    }
-                )
+                    # Create new user
+                    user = User.objects.create(
+                        user_id=user_id,
+                        full_name=full_name,
+                        gender=row.get('gender'),
+                        date_of_birth=row.get('date_of_birth'),
+                        nationality=row.get('nationality'),
+                        role=row.get('role', 'student'),
+                        password=password  # Django will hash automatically if you override save()
+                    )
 
-                if created:
+                    # Log only new user creation with ID and password
                     message = f"Created user: {user.full_name} ({user.user_id}) with password {password}"
-                else:
-                    message = f"User {user.full_name} ({user.user_id}) already exists, profile updated"
+                    print(message)
+                    log_file.write(message + "\n")
 
-                # Write to both stdout and log file
-                self.stdout.write(message)
-                log_file.write(message + "\n")
 
                 # Wait a few seconds for signal to create StudentProfile
                 time.sleep(2)
