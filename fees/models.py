@@ -94,7 +94,7 @@ class StudentFeeRecord(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-date_created']
+        ordering = ['date_created']
         verbose_name = 'Student Fee Record'
         verbose_name_plural = 'Student Fee Records'
         unique_together = ('student', 'fee_structure')
