@@ -168,12 +168,19 @@ class Payment(models.Model):
             else:
                 payment_status = "full payment"
 
+                # ₵
+
             message = (
-                f"Dear Parent, you have made a {payment_status} of GHS {self.amount} "
-                f"for your child {student.user.full_name} for {record.fee_structure.grade_class}, {record.fee_structure.term} academic year . "
-                f"Remaining balance: GHS {record.balance}. "
+                f"Dear Parent/Guardian,\n"
+                f"You made a {payment_status} of GH₵ {self.amount} for your ward, {student.user.full_name}.\n"
+                f"Purpose: School fees\n"
+                f"Class/Term: {record.fee_structure.grade_class} – {record.fee_structure.term} academic year.\n"
+                f"Balance: GH₵ {record.balance}.\n"
                 f"Thank you."
             )
+
+
+
 
             print("Prepared SMS message:", message)
             print("Parent phone number:", parent_phone)
@@ -182,4 +189,5 @@ class Payment(models.Model):
             # Send SMS asynchronously so it doesn't block the save
             if parent_phone:
                 print("Sending SMS...")
+                print(message)
                 Thread(target=send_sms, args=(parent_phone, message)).start()
