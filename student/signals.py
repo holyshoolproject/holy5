@@ -29,7 +29,7 @@ from .models import Term, GradeClass
 def create_student_term_records(sender, instance, created, **kwargs):
     if created:
         # When a new term is created
-        students = StudentProfile.objects.filter(user__active=True)
+        students = StudentProfile.objects.filter(user__is_active=True)
 
         for student in students:
             # Try to find a GradeClass that matches the student's current_class name
