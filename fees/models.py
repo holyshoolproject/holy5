@@ -27,8 +27,7 @@ class FeeStructure(models.Model):
         return f"{self.grade_class} - {self.term}  — {self.amount} GHS"
 
 
-# -----------------------
-# STUDENT FEE RECORD
+
 # -----------------------
 from decimal import Decimal
 from django.db import models
@@ -39,10 +38,6 @@ import requests
 from student.models import StudentProfile
 from fees.models import FeeStructure
 
-
-# -----------------------------
-# Helper function for SMS
-# -----------------------------
 import requests
 import json
 
