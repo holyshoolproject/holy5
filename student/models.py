@@ -132,6 +132,9 @@ class Term(models.Model):
     name = models.CharField(max_length=20, choices=TERM_CHOICES)
     academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE)
 
+    class Meta:
+        unique_together = ("name", "academic_year")
+
     def __str__(self):
         return f"{self.name} - ({self.academic_year})"
 
