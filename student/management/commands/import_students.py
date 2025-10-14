@@ -9,6 +9,35 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 from student.models import StudentProfile
 
+CLASS_NAME_TO_NUMBER = {
+    'creche': 1,
+    'nursery 1': 2,
+    'nursery 2': 3,
+    'kg 1': 4,
+    'kg1': 4,
+    'kg 2': 5,
+    'kg2': 5,
+    'class 1': 6,
+    'class1': 6,
+    'class 2': 7,
+    'class2': 7,
+    'class 3': 8,
+    'class3': 8,
+    'class 4': 9,
+    'class4': 9,
+    'class 5': 10,
+    'class5': 10,
+    'class 6': 11,
+    'class6': 11,
+    'jhs 1': 12,
+    'jhs1': 12,
+    'jhs 2': 13,
+    'jhs2': 13,
+    'jhs 3': 14,
+    'jhs3': 14,
+}
+
+
 def clean_phone(value):
     if pd.isna(value):
         return None
@@ -114,7 +143,18 @@ class Command(BaseCommand):
 
                     
                     profile.house_number = row.get('house_number')
+                    # Handle current_class name conversion
+                    current_class_name = str(row.get('current_class', '')).strip().lower()
+                    if current_class_name:
+                        current_class_value = CLASS_NAME_TO_NUMBER.get(current_class_name)
+                        if current_class_value:
+                            profile.current_class = current_class_value
+                        else:
+                            print(f"Warning: Unknown class name '{current_class_name}' for user {user.full_name}")
+
                     profile.save()
+
+                    
                 except StudentProfile.DoesNotExist:
                     error_msg = f"StudentProfile for user {user.user_id} not found!"
                     self.stdout.write(error_msg)

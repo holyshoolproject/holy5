@@ -1,9 +1,4 @@
-
-Student Import Log
-==================================================
-
 Name: Princella Nkansah. ID: 12999451 PIN: 9707
-Name: Mikayla Osae Asante. ID: 17024190 PIN: 4708
 Name: Homey Benedict Harrison. ID: 65417528 PIN: 4502
 Name: Precious Mamle Fosu. ID: 76548760 PIN: 1464
 Name: God's Brin Nimaffull. ID: 27000023 PIN: 4975
@@ -34,12 +29,6 @@ Name: Eugene Paul Arhin Mintah. ID: 89636732 PIN: 5118
 Name: Meshack Ofosu. ID: 56413928 PIN: 3497
 Name: Emmanuel Annan. ID: 16719311 PIN: 6378
 Name: Josephine Dadzie. ID: 29652788 PIN: 2474
-
-Import Completed.
-
-Student Import Log
-==================================================
-
 Name: Dorinda Abena N. A.. ID: 27204156 PIN: 7620
 Name: Jayden Amon Quaye. ID: 33303745 PIN: 6753
 Name: Ann Ofosu. ID: 23712557 PIN: 7866
@@ -47,7 +36,7 @@ Name: Erica Appea-Apreku Owiredu. ID: 38278777 PIN: 9095
 Name: Twerenyame Boakye Gyan Sekyere. ID: 38957100 PIN: 5574
 Name: Daniel Adu Ampofo. ID: 68602187 PIN: 2464
 Name: Juliana Opamfowa Sam Arthur. ID: 33481164 PIN: 3388
-Name: Fred Nshyraba Obeng. ID: 53792804 PIN: 5127
+Name: Fred Nshyraba Obeng. ID: 53792804 PIN: 5127 (fix name)
 Name: Chief Amoanyi Quansah. ID: 47893305 PIN: 7859
 Name: Gabriel Anti Dadzie. ID: 51461687 PIN: 8613
 Name: Mildred Illyn Appah-Kum. ID: 31240884 PIN: 7977
@@ -57,5 +46,10 @@ Name: Christabel Arkoh. ID: 82496511 PIN: 2538
 Name: Neriah Nana Efya Bassoah. ID: 31760248 PIN: 8841
 Name: Michealina Ganyo. ID: 20660996 PIN: 8291
 Name: Erica Ganyo. ID: 98214342 PIN: 4776
+
+
+Student Import Log
+==================================================
+
 
 Import Completed.

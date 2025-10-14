@@ -11,6 +11,23 @@ class StudentProfile(models.Model):
         ('no', 'no'),
     ]
 
+    CURRENT_CLASS_CHOICES = [
+        (1, 'creche'),
+        (2, 'nursery 1'),
+        (3, 'nursery 2'),
+        (4, 'kg 1'),
+        (5, 'kg 2'),
+        (6, 'class 1'),
+        (7, 'class 2'),
+        (8, 'class 3'),
+        (9, 'class 4'),
+        (10, 'class 5'),
+        (11, 'class 6'),
+        (12, 'jhs 1'),
+        (13, 'jhs 2'),
+        (14, 'jhs 3'),
+    ]
+
     CLASS_CHOICES = [
         ('creche', 'creche'),
         ('nursery 1', 'nursery 1'),
@@ -29,6 +46,8 @@ class StudentProfile(models.Model):
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="student_profile")
+    current_class = models.PositiveSmallIntegerField(choices=CURRENT_CLASS_CHOICES, default=1)
+
     last_school_attended = models.CharField(max_length=255, null=True, blank=True)
     class_seeking_admission_to = models.CharField(max_length=20, choices=CLASS_CHOICES, null=True, blank=True)
     is_immunized = models.CharField(max_length=200, null=True, blank=True)
@@ -52,8 +71,12 @@ class StudentProfile(models.Model):
 
     house_number =  models.CharField(max_length=100, null=True, blank=True)
 
+    def get_current_class_display_name(self):
+        return dict(self.CURRENT_CLASS_CHOICES).get(self.current_class, "Unknown")
+    
     def __str__(self):
-        return self.user.full_name 
+        return f"{self.user.full_name} - {self.get_current_class_display_name()}"
+
 
 
 class GradeClass(models.Model):

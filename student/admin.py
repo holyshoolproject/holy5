@@ -7,20 +7,23 @@ class StudentProfileAdmin(admin.ModelAdmin):
         "user",
         "contact_of_father",
         "contact_of_mother",
-        "has_peculiar_health_issues",
+        "get_current_class_display_name",
         "name_of_father",
         "name_of_mother",
     )
     list_filter = (
-        "class_seeking_admission_to",
-        "has_allergies",
-        "has_peculiar_health_issues",
+        "current_class",
+     
+
     )
     search_fields = (
         "user__full_name",   # assuming your User model has full_name
-        "name_of_father",
-        "name_of_mother",
+
     )
+
+    def get_current_class_display_name(self, obj):
+        return obj.get_current_class_display_name()
+    get_current_class_display_name.short_description = "Current Class"
 
 @admin.register(GradeClass)
 class GradeClassAdmin(admin.ModelAdmin):
