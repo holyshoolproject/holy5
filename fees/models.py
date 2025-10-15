@@ -180,9 +180,10 @@ class Payment(models.Model):
             )
 
 
-
-
-            print("Prepared SMS message:", message)
+            print("Prepared SMS message")
+            print("-------------------------------------------------------")
+            print(message)
+            print("-------------------------------------------------------")
             print("Parent phone number:", parent_phone)
             print("Student name:", student)
 
