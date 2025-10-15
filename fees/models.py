@@ -172,7 +172,7 @@ class Payment(models.Model):
 
             message = (
                 f"Dear Parent/Guardian,\n"
-                f"You made a {payment_status} of GH₵ {self.amount} for your ward, {student.user.full_name}.\n"
+                f"You made a {payment_status} of GH₵ {self.amount} for your ward, {student.user.full_name.title()}.\n"
                 f"Purpose: School fees\n"
                 f"Class/Term: {record.fee_structure.grade_class} – {record.fee_structure.term} academic year.\n"
                 f"Balance: GH₵ {record.balance}.\n"

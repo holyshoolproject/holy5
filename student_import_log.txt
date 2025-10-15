@@ -59,3 +59,20 @@ Student Import Log
 
 
 Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Dennis Marfo. ID: 67528788 PIN: 8130
+Name: Perpetual Koomson. ID: 75855510 PIN: 1516
+Name: Lawrence Amaning. ID: 91501240 PIN: 1318
+Name: Getrude Asare Acquah. ID: 30138138 PIN: 4457
+Name: Ansah Blessing. ID: 89201899 PIN: 7692
+Name: Aseda sekyere Afful. ID: 73172758 PIN: 2747
+Name: Christiana Sam. ID: 18866059 PIN: 1773
+Name: De - Clerk Abban. ID: 66283782 PIN: 4701
+Name: Elvis F. Bruno. ID: 25463615 PIN: 5824
+Name: Mariam Maame Yaba Bruno. ID: 59386215 PIN: 1719
+Name: Frank Anno Bruno. ID: 63117553 PIN: 6450
+
+Import Completed.
