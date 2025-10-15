@@ -56,6 +56,11 @@ def send_sms(recipient, message):
   
     }
 
+    print("-----------------------------------------------")
+    print("Sending SMS to:", recipient)
+    print(message)
+    print("-----------------------------------------------")
+
     try:
         response = requests.post(url, json=data, timeout=10)
         # Raise error if response is not 2xx
