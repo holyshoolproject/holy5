@@ -46,23 +46,6 @@ Name: Christabel Arkoh. ID: 82496511 PIN: 2538
 Name: Neriah Nana Efya Bassoah. ID: 31760248 PIN: 8841
 Name: Michealina Ganyo. ID: 20660996 PIN: 8291
 Name: Erica Ganyo. ID: 98214342 PIN: 4776
-
-
-Student Import Log
-==================================================
-
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-
-Import Completed.
-
-Student Import Log
-==================================================
-
 Name: Dennis Marfo. ID: 67528788 PIN: 8130
 Name: Perpetual Koomson. ID: 75855510 PIN: 1516
 Name: Lawrence Amaning. ID: 91501240 PIN: 1318
@@ -74,5 +57,11 @@ Name: De - Clerk Abban. ID: 66283782 PIN: 4701
 Name: Elvis F. Bruno. ID: 25463615 PIN: 5824
 Name: Mariam Maame Yaba Bruno. ID: 59386215 PIN: 1719
 Name: Frank Anno Bruno. ID: 63117553 PIN: 6450
+Name: Lydia Nana Esi Ayim. ID: 29786967 PIN: 3397
+Name: Ekua Affoa. ID: 38028012 PIN: 4379
+Name: Clara Nyamevor. ID: 51970332 PIN: 7191
+Name: Elsa Adwoa Sem Dadzie. ID: 86267315 PIN: 6865
+Name: Nafiisah Salisu. ID: 49063545 PIN: 5407
+Name: Hamdallah Osman Pelpuo. ID: 92115772 PIN: 8209
 
-Import Completed.
+

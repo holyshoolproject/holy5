@@ -36,7 +36,7 @@ class StudentFeeRecordAdmin(admin.ModelAdmin):
     list_display = ("student", "fee_structure", "amount_paid", "balance", "is_fully_paid", "date_created")
     list_filter = ("student__current_class", "is_fully_paid", "fee_structure")
     search_fields = ("student__user__full_name", "fee_structure__grade_class__name")
-    ordering = ("student",)
+    ordering = ("-date_created",)
     readonly_fields = ("balance", "is_fully_paid")
 
 
