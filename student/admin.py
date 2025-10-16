@@ -39,7 +39,7 @@ class GradeClassAdmin(admin.ModelAdmin):
 class StudentTermRecordAdmin(admin.ModelAdmin):
     list_display = ("student", "get_class", "term", "attendance")
     list_filter = ("term", "grade_class")
-    search_fields = ("student__full_name",)
+    search_fields = ("student__user__full_name",)
 
     def get_class(self, obj):
         return obj.grade_class

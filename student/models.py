@@ -5,6 +5,8 @@ User = get_user_model()
 
 # Create your models here.
 class StudentProfile(models.Model):
+    
+
 
     YES_NO_CHOICES = [
         ('yes', 'yes'),
