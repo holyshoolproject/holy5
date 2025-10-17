@@ -1,3 +1,5 @@
+moses and Josephine dad num: 0244730682
+
 felx mum 0543357761 (for sms) Felix K. Asamoah     DONE
 Shantel Ako 0530376302 DONE
 Ekua ofori 0559610656  DONE
@@ -25,8 +27,9 @@ all these (2000-02-02) must be updated
  juliet and joel biney now uses mom( switched mon and dad contacts )
  Mikayla Yireh Adjei NOW USES mom for sms (switched dad and mom contacts)
  felix now uses mom. (no switch. )
+ donatela and asantewa (switched mon and dad contacts)
  
-
+check the save and add again issue
 
 Name: Princella Nkansah. ID: 12999451 PIN: 9707
 Name: Homey Benedict Harrison. ID: 65417528 PIN: 4502
@@ -115,5 +118,48 @@ Name: Anabel Mensah. ID: 30354735 PIN: 6616
 Name: Kojo Prah. ID: 97282321 PIN: 4479
 Name: Moses Dazie. ID: 40547698 PIN: 5258
 Name: Naadom Yeboah. ID: 17732644 PIN: 8873
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Elvis Anobil. ID: 93429514 PIN: 4073
+Name: Reginald Addo. ID: 21613310 PIN: 8418
+Name: Theodore Addo. ID: 81380405 PIN: 3018
+Name: Mercy Otabil. ID: 32738444 PIN: 7278
+Name: Acquah Princess. ID: 47179622 PIN: 8916
+Name: Randy Otoo. ID: 74856870 PIN: 1290
+Name: Samuel Arthur. ID: 33089681 PIN: 9728
+Name: Joycelyn N. Amankwanor. ID: 39449237 PIN: 8445
+
+Student Import Log
+==================================================
+
+
+Student Import Log
+==================================================
+
+Name: NaT. ID: 17449914 PIN: 9881
+
+Student Import Log
+==================================================
+
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Donatella A. Amankwanor. ID: 16217683 PIN: 7451
+Name: Clara Yeboah. ID: 22508299 PIN: 3576
+Name: Nkumin Aheawa Odoom. ID: 45166366 PIN: 9638
+Name: Ansah Kwesi. ID: 92469106 PIN: 5143
+Name: Bohyeba Aboagye Odoom. ID: 24730372 PIN: 9501
+Name: Estherline Ansah. ID: 83835480 PIN: 1297
+Name: Kofi Sika-pa Boateng. ID: 46609711 PIN: 6476
+Name: Emmanuella Asherow. ID: 37643579 PIN: 2755
+Name: Kingsley Asare Acquah. ID: 48933969 PIN: 4089
+Name: Theresah Agyrey. ID: 38131714 PIN: 4084
 
 Import Completed.

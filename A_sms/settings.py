@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'staff.apps.StaffConfig',
     'principal.apps.PrincipalConfig',
     'fees.apps.FeesConfig',
+    'familyfees.apps.FamilyfeesConfig',
 
 
 

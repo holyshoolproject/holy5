@@ -9,6 +9,15 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 from student.models import StudentProfile
 
+
+def safe_date(value):
+    import pandas as pd
+    if pd.isna(value) or value is pd.NaT:
+        return None
+    return value
+
+
+
 CLASS_NAME_TO_NUMBER = {
     'creche': 1,
     'nursery 1': 2,
@@ -63,6 +72,8 @@ class Command(BaseCommand):
             return
 
         df = pd.read_excel(excel_file)
+        df = df.where(pd.notnull(df), None)
+
 
         # Open a log file to write the output
         log_file_path = os.path.join(settings.BASE_DIR, 'student_import_log.txt')
@@ -74,6 +85,11 @@ class Command(BaseCommand):
 
             for index, row in df.iterrows():
                 full_name = str(row.get('full_name', '')).strip()
+
+                # If we reach an empty or invalid full_name, stop importing
+                if not full_name or full_name.lower() in ['nan', 'nat', 'none']:
+                    print(f"Reached empty row at index {index}. Import stopped.")
+                    break
 
                 # Check if a user with this full name already exists
                 user = User.objects.filter(full_name__iexact=full_name).first()
@@ -99,13 +115,14 @@ class Command(BaseCommand):
 
                     # Create new user
                     user = User.objects.create(
-                        user_id=user_id,
-                        full_name=full_name,
-                        gender=row.get('gender'),
-                        date_of_birth=row.get('date_of_birth'),
-                        nationality=row.get('nationality'),
-                        role=row.get('role', 'student'),
-                             )
+                    user_id=user_id,
+                    full_name=full_name,
+                    gender=row.get('gender'),
+                    date_of_birth=safe_date(row.get('date_of_birth')),
+                    nationality=row.get('nationality'),
+                    role=row.get('role', 'student'),
+                )
+
                     user.set_password(password)
                     user.save()
 
