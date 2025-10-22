@@ -13,6 +13,10 @@ class Family(models.Model):
     name = models.CharField(max_length=100, unique=True)
     members = models.ManyToManyField(User, related_name="family_members")
 
+    class Meta:
+        verbose_name = "Family"
+        verbose_name_plural = "Families"
+
     def __str__(self):
         return self.name
 

@@ -45,6 +45,7 @@ class StudentProfile(models.Model):
         ('jhs 1', 'jhs 1'),
         ('jhs 2', 'jhs 2'),
         ('jhs 3', 'jhs 3'),
+
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="student_profile")

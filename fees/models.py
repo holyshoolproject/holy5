@@ -21,7 +21,7 @@ class FeeStructure(models.Model):
 
         verbose_name = 'Fee Structure'
         verbose_name_plural = 'Fee Structures'
-        unique_together = ('academic_year', 'grade_class', 'term')
+
 
     def __str__(self):
         return f"{self.grade_class} - {self.term}  — {self.amount} GHS"

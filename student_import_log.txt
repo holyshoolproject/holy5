@@ -28,6 +28,7 @@ all these (2000-02-02) must be updated
  Mikayla Yireh Adjei NOW USES mom for sms (switched dad and mom contacts)
  felix now uses mom. (no switch. )
  donatela and asantewa (switched mon and dad contacts)
+ mercy Otabil (switched mon and dad contacts)
  
 check the save and add again issue
 
@@ -99,9 +100,6 @@ Name: Hamdallah Osman Pelpuo. ID: 92115772 PIN: 8209
 
 
 
-Student Import Log
-==================================================
-
 Name: Priscilla Mensah. ID: 17588415 PIN: 7830
 Name: Felix K. Asamoah. ID: 79789274 PIN: 1127
 Name: Shantel Akosua Boakye Nyamekye. ID: 68404435 PIN: 1176
@@ -119,10 +117,7 @@ Name: Kojo Prah. ID: 97282321 PIN: 4479
 Name: Moses Dazie. ID: 40547698 PIN: 5258
 Name: Naadom Yeboah. ID: 17732644 PIN: 8873
 
-Import Completed.
 
-Student Import Log
-==================================================
 
 Name: Elvis Anobil. ID: 93429514 PIN: 4073
 Name: Reginald Addo. ID: 21613310 PIN: 8418
@@ -133,23 +128,7 @@ Name: Randy Otoo. ID: 74856870 PIN: 1290
 Name: Samuel Arthur. ID: 33089681 PIN: 9728
 Name: Joycelyn N. Amankwanor. ID: 39449237 PIN: 8445
 
-Student Import Log
-==================================================
 
-
-Student Import Log
-==================================================
-
-Name: NaT. ID: 17449914 PIN: 9881
-
-Student Import Log
-==================================================
-
-
-Import Completed.
-
-Student Import Log
-==================================================
 
 Name: Donatella A. Amankwanor. ID: 16217683 PIN: 7451
 Name: Clara Yeboah. ID: 22508299 PIN: 3576
@@ -161,5 +140,18 @@ Name: Kofi Sika-pa Boateng. ID: 46609711 PIN: 6476
 Name: Emmanuella Asherow. ID: 37643579 PIN: 2755
 Name: Kingsley Asare Acquah. ID: 48933969 PIN: 4089
 Name: Theresah Agyrey. ID: 38131714 PIN: 4084
+Name: Edward Mintah. ID: 55049406 PIN: 9897
+Name: Mildred Arkoh. ID: 89762505 PIN: 4360
+Name: George Yeboah. ID: 50389954 PIN: 4284
+Name: Julia Yeboah. ID: 41801738 PIN: 4192
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Elizabeth Asamoah Larbi. ID: 87046534 PIN: 2513
+Name: Dora Asamoah Larbi. ID: 51067134 PIN: 5397
+Name: Emmanuel Asamoah Larbi. ID: 67416372 PIN: 2600
 
 Import Completed.
