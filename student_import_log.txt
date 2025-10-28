@@ -29,6 +29,7 @@ all these (2000-02-02) must be updated
  felix now uses mom. (no switch. )
  donatela and asantewa (switched mon and dad contacts)
  mercy Otabil (switched mon and dad contacts)
+ kenzel dads num is = 0548045399  (currently using his grandmas mum instead of dads num)
  
 check the save and add again issue
 
@@ -164,5 +165,22 @@ Student Import Log
 ==================================================
 
 Name: Caleb Adjei Mensah. ID: 30169650 PIN: 2952
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Kenzel Opare Addo. ID: 36390781 PIN: 2618
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Mary Andoh. ID: 24094659 PIN: 7442
+Name: Aseda Essandoah. ID: 27775392 PIN: 1554
+Name: Comfort Adu-Yeboah. ID: 15571803 PIN: 8217
+Name: Nyame Adu Kontor. ID: 55704577 PIN: 8700
 
 Import Completed.

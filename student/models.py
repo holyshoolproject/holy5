@@ -52,10 +52,15 @@ class StudentProfile(models.Model):
     current_class = models.PositiveSmallIntegerField(choices=CURRENT_CLASS_CHOICES, default=1)
 
     last_school_attended = models.CharField(max_length=255, null=True, blank=True)
+    
     class_seeking_admission_to = models.CharField(max_length=20, choices=CLASS_CHOICES, null=True, blank=True)
+    
     is_immunized = models.CharField(max_length=200, null=True, blank=True)
+    
     has_allergies = models.CharField(max_length=10, choices=YES_NO_CHOICES, null=True, blank=True)
+    
     allergic_foods = models.CharField(max_length=300, null=True, blank=True)
+    
     has_peculiar_health_issues = models.CharField(max_length=10, choices=YES_NO_CHOICES, null=True, blank=True)
     health_issues = models.CharField(max_length = 150, null=True, blank=True)
     other_related_info = models.TextField(null=True, blank=True)
