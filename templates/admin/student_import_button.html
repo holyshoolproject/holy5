@@ -1,0 +1,9 @@
+{% extends "admin/change_list.html" %}
+{% block object-tools-items %}
+{{ block.super }}
+<li>
+    <a class="button" href="import-excel/" style="background-color:#2c7be5;color:white;">
+        Import Excel
+    </a>
+</li>
+{% endblock %}

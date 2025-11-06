@@ -184,3 +184,16 @@ Name: Comfort Adu-Yeboah. ID: 15571803 PIN: 8217
 Name: Nyame Adu Kontor. ID: 55704577 PIN: 8700
 
 Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Blessing Offei. ID: 30417906 PIN: 4824
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: EMMA AIDOO. ID: 53450245 PIN: 9821
+Name: Albert Aidoo. ID: 15745229 PIN: 8596
