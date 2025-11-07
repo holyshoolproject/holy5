@@ -93,15 +93,15 @@ class GradeClassAdmin(admin.ModelAdmin):
 
 
 
-@admin.register(StudentTermRecord)
-class StudentTermRecordAdmin(admin.ModelAdmin):
-    list_display = ("student", "get_class", "term", "attendance")
-    list_filter = ("term", "grade_class")
-    search_fields = ("student__user__full_name",)
+#@admin.register(StudentTermRecord)
+#class StudentTermRecordAdmin(admin.ModelAdmin):
+#    list_display = ("student", "get_class", "term", "attendance")
+#    list_filter = ("term", "grade_class")
+#    search_fields = ("student__user__full_name",)
 
-    def get_class(self, obj):
-        return obj.grade_class
-    get_class.short_description = 'Class'
+#    def get_class(self, obj):
+#        return obj.grade_class
+#    get_class.short_description = 'Class'
 
 #@admin.register(Subject)
 #class SubjectAdmin(admin.ModelAdmin):
