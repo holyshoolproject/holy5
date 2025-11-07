@@ -197,3 +197,37 @@ Student Import Log
 
 Name: EMMA AIDOO. ID: 53450245 PIN: 9821
 Name: Albert Aidoo. ID: 15745229 PIN: 8596
+
+Student Import Log
+==================================================
+
+
+Student Import Log
+==================================================
+
+Name: Anabel Mensah. ID: 88467488 PIN: 1528
+Name: Kojo Prah. ID: 77994608 PIN: 9954
+
+Student Import Log
+==================================================
+
+
+Student Import Log
+==================================================
+
+
+Student Import Log
+==================================================
+
+
+Student Import Log
+==================================================
+
+Name: king kong. ID: 34249421 PIN: 5150
+
+Student Import Log
+==================================================
+
+
+Import Completed.
+✅ Successfully imported or updated 4 students.
