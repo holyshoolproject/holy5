@@ -1,4 +1,11 @@
 from django.contrib import admin
+
+# Remove or change the default "Django Administration" header
+admin.site.site_header = "Fee Management "  # This removes the header completely
+admin.site.site_title = "h"   # This removes the title in the browser tab
+admin.site.index_title = "fees"  # This removes the "Site administration" text on the index page
+
+from django.contrib import admin
 from .models import StudentProfile, GradeClass, AcademicYear, Term, StudentTermRecord, Subject, StudentSubjectRecord
 from .utils import import_students_from_excel
 from django import forms
@@ -96,16 +103,16 @@ class StudentTermRecordAdmin(admin.ModelAdmin):
         return obj.grade_class
     get_class.short_description = 'Class'
 
-@admin.register(Subject)
-class SubjectAdmin(admin.ModelAdmin):
-    list_display = ("name",)
-    search_fields = ("name",)
+#@admin.register(Subject)
+#class SubjectAdmin(admin.ModelAdmin):
+#    list_display = ("name",)
+#    search_fields = ("name",)
 
-@admin.register(StudentSubjectRecord)
-class StudentSubjectRecordAdmin(admin.ModelAdmin):
-    list_display = ("student_term_record", "subject", "total_score", "grade")
-    list_filter = ("subject", "grade")
-    search_fields = ("student_term_record__student__full_name", "subject__name")
+#@admin.register(StudentSubjectRecord)
+#class StudentSubjectRecordAdmin(admin.ModelAdmin):
+#    list_display = ("student_term_record", "subject", "total_score", "grade")
+#    list_filter = ("subject", "grade")
+#    search_fields = ("student_term_record__student__full_name", "subject__name")
 
 
 

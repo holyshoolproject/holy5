@@ -155,6 +155,7 @@ AUTH_USER_MODEL  = 'account.User'
 
 
 JAZZMIN_SETTINGS = {
+    
     "custom_css": "css/custom.css",
     "site_title": "School Management System",
     "site_header": "School Management Admin",
