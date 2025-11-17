@@ -231,3 +231,17 @@ Student Import Log
 
 Import Completed.
 ✅ Successfully imported or updated 4 students.
+
+Student Import Log
+==================================================
+
+Name: Cailo. ID: 14547712 PIN: 3257
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+Name: Florence Osam Bentil. ID: 61985282 PIN: 7637
+
+Import Completed.
