@@ -1,12 +1,12 @@
 from rest_framework.viewsets import ModelViewSet
 from ..models import (
     StudentProfile, GradeClass, AcademicYear, Term,
-    StudentTermRecord, Subject, StudentSubjectRecord
+    StudentTermRecord, Subject, StudentSubjectRecord, 
 )
 from .ses import (
     StudentProfileSerializer, GradeClassSerializer, AcademicYearSerializer,
     TermSerializer, StudentTermRecordSerializer, SubjectSerializer,
-    StudentSubjectRecordSerializer
+    StudentSubjectRecordSerializer, StudentProfileCreateUserSerializer
 )
 
 
@@ -43,3 +43,8 @@ class SubjectViewSet(ModelViewSet):
 class StudentSubjectRecordViewSet(ModelViewSet):
     queryset = StudentSubjectRecord.objects.all()
     serializer_class = StudentSubjectRecordSerializer
+
+
+class StudentCreateProfileViewSet(ModelViewSet):
+    queryset = StudentProfile.objects.all()
+    serializer_class = StudentProfileCreateUserSerializer

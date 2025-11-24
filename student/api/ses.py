@@ -3,12 +3,23 @@ from ..models import (
     StudentProfile, GradeClass, AcademicYear, Term,
     StudentTermRecord, Subject, StudentSubjectRecord
 )
-from account.api.ses import UserSerializer
+from account.api.ses import UserSerializer, UserSerializerForPayments, UserSerializerForCreateUser
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
 from staff.api.ses import StaffProfileSerializer
+
+
+class StudentProfileSerializerForPayments(serializers.ModelSerializer):
+    user = UserSerializerForPayments(read_only=True)
+
+    class Meta:
+        model = StudentProfile
+        fields = [
+            "id",
+            "user"
+        ]
 
 
 class StudentProfileSerializer(serializers.ModelSerializer):
@@ -53,6 +64,61 @@ class StudentProfileSerializer(serializers.ModelSerializer):
         return obj.has_peculiar_health_issues.lower() == "yes" if obj.has_peculiar_health_issues else False
 
 
+class StudentProfileCreateUserSerializer(serializers.ModelSerializer):
+    user = UserSerializerForCreateUser()  # nested, not read-only
+
+    class Meta:
+        model = StudentProfile
+        fields = ["id", "user", "last_school_attended", "class_seeking_admission_to", "is_immunized",
+                  "has_allergies", "allergic_foods", "has_peculiar_health_issues", "health_issues",
+                  "other_related_info", "name_of_father", "name_of_mother", "occupation_of_father",
+                  "occupation_of_mother", "nationality_of_father", "nationality_of_mother",
+                  "contact_of_father", "contact_of_mother", "house_number"]
+
+    def create(self, validated_data):
+        user_data = validated_data.pop("user")
+        
+        import random
+        while True:
+            user_id = str(random.randint(10000001, 99999999))
+            if not User.objects.filter(user_id=user_id).exists():
+                break
+        password = str(random.randint(1000, 9999))
+        
+        user = User.objects.create(
+            user_id=user_id,
+            full_name=user_data.get("full_name"),
+            gender=user_data.get("gender"),
+            date_of_birth=user_data.get("date_of_birth"),
+            nationality=user_data.get("nationality"),
+            role=user_data.get("role", "student"),
+        )
+        user.set_password(password)
+        user.save()
+        
+        profile = StudentProfile.objects.get(user=user)
+        for key, value in validated_data.items():
+            setattr(profile, key, value)
+        profile.save()
+        return profile
+
+
+
+
+
+
+
+
+
+class LiteGradeClassSerializer(serializers.ModelSerializer):
+    
+    
+    class Meta:
+        model = GradeClass
+        fields = [
+            "name"
+        ]
+
 class GradeClassSerializer(serializers.ModelSerializer):
     staff = StaffProfileSerializer(read_only=True)
     
@@ -66,6 +132,15 @@ class AcademicYearSerializer(serializers.ModelSerializer):
         model = AcademicYear
         fields = "__all__"
 
+
+class LiteTermSerializer(serializers.ModelSerializer):
+   
+    
+    class Meta:
+        model = Term
+        fields = [
+            "name"
+        ]
 
 class TermSerializer(serializers.ModelSerializer):
     academic_year = AcademicYearSerializer(read_only=True)

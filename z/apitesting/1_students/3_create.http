@@ -1,0 +1,21 @@
+POST http://127.0.0.1:8000/api/student/create/
+
+Content-Type: application/json
+
+
+{
+  "user": {
+    "full_name": "John Doe",
+    "user_id": "12345",
+    "role": "student",
+    "gender": "male",
+    "nationality": "Ghanaian",
+    "is_active": true,
+    "is_staff": false,
+    "date_of_birth": "2010-05-12"
+  },
+  "last_school_attended": "Happy Kids School",
+  "class_seeking_admission_to": "class 1",
+  "is_immunized": "yes",
+  "has_allergies": "no"
+}

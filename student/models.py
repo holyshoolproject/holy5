@@ -108,6 +108,7 @@ class GradeClass(models.Model):
     staff = models.ForeignKey(StaffProfile, on_delete=models.SET_NULL, null=True, blank=False, verbose_name="Teacher") 
 
     class Meta:
+        ordering = ['-id']
         verbose_name = "Class"
         verbose_name_plural = "Classes"
         
@@ -141,6 +142,7 @@ class Term(models.Model):
     academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE)
 
     class Meta:
+        ordering = ['-id']
         unique_together = ("name", "academic_year")
 
     def __str__(self):

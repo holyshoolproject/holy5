@@ -94,7 +94,7 @@ class StudentFeeRecord(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-date_created']
+        ordering = ['-id']
         verbose_name = 'Student Fee Record'
         verbose_name_plural = 'Student Fee Records'
         unique_together = ('student', 'fee_structure')
@@ -152,6 +152,7 @@ class Payment(models.Model):
     class Meta:
         verbose_name = 'Payment'
         verbose_name_plural = 'Payments'
+        ordering = ['-id']
 
     def __str__(self):
         return f"{self.student_fee_record.student.user.full_name} - {self.amount} GHS"

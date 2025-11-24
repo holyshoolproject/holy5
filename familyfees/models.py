@@ -14,6 +14,7 @@ class Family(models.Model):
     members = models.ManyToManyField(User, related_name="family_members")
 
     class Meta:
+        ordering = ['-id']
         verbose_name = "Family"
         verbose_name_plural = "Families"
 
@@ -36,7 +37,7 @@ class FamilyFeeRecord(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-date_created']
+        ordering = ['-id']
         verbose_name = 'Family Fee Record'
         verbose_name_plural = 'Family Fee Records'
         unique_together = ('family', 'term', 'academic_year')
@@ -79,6 +80,7 @@ class FamilyPayment(models.Model):
     payment_method = models.CharField(max_length=50, blank=True, null=True)  # e.g., Cash, MOMO, Bank
 
     class Meta:
+        ordering = ['-id']
         verbose_name = "Family Payment"
         verbose_name_plural = "Family Payments"
 
