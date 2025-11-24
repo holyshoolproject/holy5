@@ -122,6 +122,7 @@ class PaymentSerializer(serializers.ModelSerializer):
             "student_fee_record",
             "date",
             "amount",
+            "payment_method"
            
         ]
     
