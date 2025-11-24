@@ -1,15 +1,28 @@
+
 from rest_framework import serializers
 
 from student.models import StudentProfile
 from ..models import FeeStructure, StudentFeeRecord, Payment
-from student.api.ses import StudentProfileSerializer, AcademicYearSerializer, GradeClassSerializer, TermSerializer, StudentProfileSerializerForPayments, LiteGradeClassSerializer, LiteTermSerializer
+from student.api.ses import (
+    StudentProfileSerializer,
+    AcademicYearSerializer,
+    GradeClassSerializer,
+    TermSerializer,
+    StudentProfileSerializerForPayments,
+    LiteGradeClassSerializer,
+    LiteTermSerializer,
+)
 
 # ---------------------------------------------------------
-# FEE STRUCTURE SERIALIZER
+# FEE STRUCTURE SERIALIZERS
 # ---------------------------------------------------------
 class LiteFeeStructureSerializer(serializers.ModelSerializer):
+    """
+    Lightweight FeeStructure serializer used inside nested responses to
+    avoid deep graphs and performance issues.
+    """
     grade_class = LiteGradeClassSerializer(read_only=True)
-    term = LiteTermSerializer(read_only=True) 
+    term = LiteTermSerializer(read_only=True)
     academic_year = AcademicYearSerializer(read_only=True)
 
     class Meta:
@@ -17,11 +30,13 @@ class LiteFeeStructureSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-
 class FeeStructureSerializer(serializers.ModelSerializer):
+    """
+    Full FeeStructure serializer for detailed views / forms.
+    """
     academic_year = AcademicYearSerializer(read_only=True)
     grade_class = GradeClassSerializer(read_only=True)
-    term = TermSerializer(read_only=True) 
+    term = TermSerializer(read_only=True)
 
     academic_year_id = serializers.IntegerField(write_only=True)
     grade_class_id = serializers.IntegerField(write_only=True)
@@ -33,9 +48,13 @@ class FeeStructureSerializer(serializers.ModelSerializer):
 
 
 # ---------------------------------------------------------
-# STUDENT FEE RECORD SERIALIZER
+# STUDENT FEE RECORD SERIALIZERS
 # ---------------------------------------------------------
 class StudentFeeRecordSerializer(serializers.ModelSerializer):
+    """
+    Used when creating or listing StudentFeeRecords directly.
+    Keeps student and fee_structure lightweight for performance.
+    """
     student = StudentProfileSerializerForPayments(read_only=True)
     fee_structure = LiteFeeStructureSerializer(read_only=True)
 
@@ -65,10 +84,9 @@ class StudentFeeRecordSerializer(serializers.ModelSerializer):
             "is_fully_paid",
         ]
 
-
     def create(self, validated_data):
-        # Print incoming frontend data
-        print("Frontend payload received in serializer:", validated_data)
+        # Incoming payload from frontend (for visibility during debugging)
+        print("Frontend payload received in StudentFeeRecord serializer:", validated_data)
 
         # Pop the IDs to assign FK relations
         student = validated_data.pop("student_id")
@@ -80,13 +98,18 @@ class StudentFeeRecordSerializer(serializers.ModelSerializer):
             fee_structure=fee_structure,
             **validated_data
         )
-
         return record
 
 
 class SimpleStudentFeeRecordSerializer(serializers.ModelSerializer):
+    """
+    Used as a nested serializer inside PaymentSerializer.
+    IMPORTANT CHANGE: fee_structure now uses LiteFeeStructureSerializer
+    to reduce nested depth (prevents N+1 queries and timeouts).
+    """
     student = StudentProfileSerializerForPayments(read_only=True)
-    fee_structure = FeeStructureSerializer(read_only=True)
+    fee_structure = LiteFeeStructureSerializer(read_only=True)  # <-- changed from full FeeStructureSerializer
+
     class Meta:
         model = StudentFeeRecord
         fields = [
@@ -104,40 +127,42 @@ class SimpleStudentFeeRecordSerializer(serializers.ModelSerializer):
 # PAYMENT SERIALIZER
 # ---------------------------------------------------------
 class PaymentSerializer(serializers.ModelSerializer):
-    date = serializers.DateField(required=False)
-    
-    # Avoid circular: show only ID for student_fee_record
+    """
+    Payment serializer with write-only FK ID (student_fee_record_id)
+    and a read-only nested SimpleStudentFeeRecord.
+    """
+    # Make date robust; allow it to be omitted or null from frontend
+    date = serializers.DateField(required=False, allow_null=True)
+
+    # Avoid circular references: write-only ID used to create the FK
     student_fee_record_id = serializers.PrimaryKeyRelatedField(
         queryset=StudentFeeRecord.objects.all(), write_only=True
     )
 
-
+    # Read-only nested representation for the frontend
     student_fee_record = SimpleStudentFeeRecordSerializer(read_only=True)
 
     class Meta:
         model = Payment
         fields = [
             "id",
-            "student_fee_record_id",
-            "student_fee_record",
+            "student_fee_record_id",  # write-only FK input
+            "student_fee_record",     # read-only nested output
             "date",
             "amount",
-            "payment_method"
-           
+            "payment_method",
         ]
-    
-    def create(self, validated_data):
-        # Print incoming frontend data
-        print("Frontend payload received in serializer for payments:", validated_data)
 
-        # Pop the IDs to assign FK relations
+    def create(self, validated_data):
+        # Incoming payload from frontend (for visibility during debugging)
+        print("Frontend payload received in Payment serializer:", validated_data)
+
+        # Pop the write-only FK ID and attach the relation
         student_fee_record = validated_data.pop("student_fee_record_id")
-        
+
         # Create the payment
         pay = Payment.objects.create(
             student_fee_record=student_fee_record,
-           
             **validated_data
         )
-
         return pay
