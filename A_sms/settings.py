@@ -108,6 +108,7 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 
 
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -134,10 +135,9 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-
-
 '''
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
