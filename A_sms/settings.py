@@ -58,6 +58,9 @@ INSTALLED_APPS = [
     'fees.apps.FeesConfig',
     'familyfees.apps.FamilyfeesConfig',
 
+    # third party
+     'rest_framework',
+
 
 
 
@@ -135,8 +138,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-'''
 
+'''
 
 
 # Password validation
