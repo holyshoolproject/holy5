@@ -109,6 +109,34 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'king',
+        'USER': 'neondb_owner',
+        'PASSWORD': 'npg_oHFXtd4vbi9K',
+        'HOST': 'ep-dry-term-afplpb09-pooler.c-2.us-west-2.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'channel_binding': 'require',
+        },
+    }
+}
+'''
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
+    }
+}
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -125,21 +153,6 @@ DATABASES = {
 
 
 
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'king',
-        'USER': 'neondb_owner',
-        'PASSWORD': 'npg_oHFXtd4vbi9K',
-        'HOST': 'ep-dry-term-afplpb09-pooler.c-2.us-west-2.aws.neon.tech',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',
-            'channel_binding': 'require',
-        },
-    }
-}
 
 
 DATABASES = {
