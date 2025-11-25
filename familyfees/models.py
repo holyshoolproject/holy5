@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 from student.models import Term, AcademicYear
 from fees.models import StudentFeeRecord
 from threading import Thread
+from decimal import Decimal
 from fees.models import send_sms  # import your existing send_sms helper
 
 User = get_user_model()
@@ -24,7 +25,9 @@ class Family(models.Model):
     def member_names(self):
         return ", ".join(user.full_name for user in self.members.all())
 
-from decimal import Decimal
+
+
+
 
 class FamilyFeeRecord(models.Model):
     family = models.ForeignKey(Family, on_delete=models.CASCADE)
@@ -125,4 +128,4 @@ class FamilyPayment(models.Model):
                 parent_phone = first_member.student_profile.contact_of_father
                 if parent_phone:
                     print("sent to:", parent_phone)
-                    Thread(target=send_sms, args=(parent_phone, message)).start()
+                    #Thread(target=send_sms, args=(parent_phone, message)).start()

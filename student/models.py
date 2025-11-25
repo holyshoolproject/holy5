@@ -149,6 +149,8 @@ class Term(models.Model):
         return f"{self.name} - ({self.academic_year})"
 
 
+
+
 class StudentTermRecord(models.Model):
     student = models.ForeignKey(StudentProfile, on_delete=models.CASCADE)
     term = models.ForeignKey(Term, on_delete=models.CASCADE)
@@ -169,7 +171,6 @@ class StudentTermRecord(models.Model):
         if subject_records:
             return sum(s.total_score for s in subject_records) / subject_records.count()
         return 0
-
 
 class Subject(models.Model):
     name = models.CharField(max_length=20)

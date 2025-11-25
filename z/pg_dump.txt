@@ -1,1 +1,5 @@
 pg_dump "postgresql://neondb_owner:npg_oHFXtd4vbi9K@ep-dry-term-afplpb09-pooler.c-2.us-west-2.aws.neon.tech/king?sslmode=require&channel_binding=disable" > neon_backup.sql
+
+
+importing data to superbase: 
+psql "postgresql://postgres.dgqfzkaafqiosmvdotgi:Uncleproton1.@aws-1-eu-central-1.pooler.supabase.com:5432/postgres" -f neon_backup_utf8.sql
