@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import random
 import time
+from datetime import datetime, timedelta
 from django.core.management.base import BaseCommand
 from django.conf import settings
 from django.contrib.auth import get_user_model
@@ -16,6 +17,14 @@ def safe_date(value):
         return None
     return value
 
+
+def excel_to_date(serial):
+    if not isinstance(serial, (int, float)):
+        return None
+    try:
+        return datetime(1899, 12, 30) + timedelta(days=int(serial))
+    except Exception:
+        return None
 
 
 CLASS_NAME_TO_NUMBER = {
@@ -98,7 +107,7 @@ class Command(BaseCommand):
                     print(f"User {full_name} already exists, profile updated")
                     # Update existing user details
                     user.gender = row.get('gender', user.gender)
-                    user.date_of_birth = row.get('date_of_birth', user.date_of_birth)
+                    user.date_of_birth = excel_to_date(row.get('date_of_birth')) or user.date_of_birth
                     user.nationality = row.get('nationality', user.nationality)
                     user.role = row.get('role', user.role)
                     user.save()
@@ -118,7 +127,7 @@ class Command(BaseCommand):
                     user_id=user_id,
                     full_name=full_name,
                     gender=row.get('gender'),
-                    date_of_birth=safe_date(row.get('date_of_birth')),
+                    date_of_birth=excel_to_date(row.get('date_of_birth')),
                     nationality=row.get('nationality'),
                     role=row.get('role', 'student'),
                 )
@@ -161,13 +170,18 @@ class Command(BaseCommand):
                     
                     profile.house_number = row.get('house_number')
                     # Handle current_class name conversion
-                    current_class_name = str(row.get('current_class', '')).strip().lower()
-                    if current_class_name:
+                    current_class_raw = row.get('current_class')
+                    current_class_name = str(current_class_raw).strip().lower() if pd.notna(current_class_raw) else ""
+                    if current_class_name and not current_class_name.isdigit():
                         current_class_value = CLASS_NAME_TO_NUMBER.get(current_class_name)
                         if current_class_value:
                             profile.current_class = current_class_value
                         else:
-                            print(f"Warning: Unknown class name '{current_class_name}' for user {user.full_name}")
+                            print(f"Warning: Unknown class name '{current_class_name}' for user {user.full_name}. Defaulting to 1 (creche).")
+                            profile.current_class = 1
+                    else:
+                        print(f"Missing or invalid current_class '{current_class_raw}' for {full_name}. Defaulting to 1 (creche).")
+                        profile.current_class = 1
 
                     profile.save()
 

@@ -31,217 +31,135 @@ all these (2000-02-02) must be updated
  mercy Otabil (switched mon and dad contacts)
  kenzel dads num is = 0548045399  (currently using his grandmas mum instead of dads num)
  
-check the save and add again issue
-
-Name: Princella Nkansah. ID: 12999451 PIN: 9707
-Name: Homey Benedict Harrison. ID: 65417528 PIN: 4502
-Name: Precious Mamle Fosu. ID: 76548760 PIN: 1464
-Name: God's Brin Nimaffull. ID: 27000023 PIN: 4975
-Name: Christodia Tonette Boah. ID: 93970505 PIN: 8208
-Name: Joel Kofi Biney. ID: 75603798 PIN: 1610
-Name: Cressida Nkunim Acquah. ID: 76908074 PIN: 9605
-Name: Christabel Arthur. ID: 67074936 PIN: 3723
-Name: Emmanuel Kojo Yeboah Ampofo. ID: 16238501 PIN: 3333
-Name: Nhyiraba Kwabena Arthur. ID: 71553943 PIN: 8710
-Name: Jason Asare - Asiedu. ID: 22466067 PIN: 2025
-Name: Hannah Agboba. ID: 36604017 PIN: 9672
-Name: Emmanuella Quaicoe. ID: 67625753 PIN: 5532
-Name: Henry Amoasie. ID: 65939149 PIN: 5221
-Name: Micheal Anakwah Kyei. ID: 12545130 PIN: 1154
-Name: Heward Nana Nkaso Sule. ID: 29065687 PIN: 8124
-Name: Rebecca Okyere. ID: 59856324 PIN: 4765
-Name: Mikayla Yireh Adjei. ID: 21497750 PIN: 2052
-Name: Pricsla Mensah. ID: 36179901 PIN: 2856
-Name: Richiel Owusua Hammond. ID: 88904184 PIN: 3360
-Name: Goodluck Solomon Asherow. ID: 32973694 PIN: 4177
-Name: Patrick K. Asare. ID: 61463267 PIN: 7112
-Name: Kelvin Fiifi Sam. ID: 98568516 PIN: 6267
-Name: Justice K. Amoanyi. ID: 11515012 PIN: 5493
-Name: Petra Esinam Ahiable. ID: 70076070 PIN: 3465
-Name: Emmanuel Mawuli Kwesi Ahiable. ID: 78468433 PIN: 6649
-Name: Elvis Saviour Kobina Mintah. ID: 65994940 PIN: 5286
-Name: Eugene Paul Arhin Mintah. ID: 89636732 PIN: 5118
-Name: Meshack Ofosu. ID: 56413928 PIN: 3497
-Name: Emmanuel Annan. ID: 16719311 PIN: 6378
-Name: Josephine Dadzie. ID: 29652788 PIN: 2474
-Name: Dorinda Abena N. A.. ID: 27204156 PIN: 7620
-Name: Jayden Amon Quaye. ID: 33303745 PIN: 6753
-Name: Ann Ofosu. ID: 23712557 PIN: 7866
-Name: Erica Appea-Apreku Owiredu. ID: 38278777 PIN: 9095
-Name: Twerenyame Boakye Gyan Sekyere. ID: 38957100 PIN: 5574
-Name: Daniel Adu Ampofo. ID: 68602187 PIN: 2464
-Name: Juliana Opamfowa Sam Arthur. ID: 33481164 PIN: 3388
-Name: Fred Nshyraba Obeng. ID: 53792804 PIN: 5127 (fix name)
-Name: Chief Amoanyi Quansah. ID: 47893305 PIN: 7859
-Name: Gabriel Anti Dadzie. ID: 51461687 PIN: 8613
-Name: Mildred Illyn Appah-Kum. ID: 31240884 PIN: 7977
-Name: Maame Esi Ansekua Amoaku. ID: 76716537 PIN: 5612
-Name: Prince Ganyo. ID: 14645490 PIN: 2058
-Name: Christabel Arkoh. ID: 82496511 PIN: 2538
-Name: Neriah Nana Efya Bassoah. ID: 31760248 PIN: 8841
-Name: Michealina Ganyo. ID: 20660996 PIN: 8291
-Name: Erica Ganyo. ID: 98214342 PIN: 4776
-Name: Dennis Marfo. ID: 67528788 PIN: 8130
-Name: Perpetual Koomson. ID: 75855510 PIN: 1516
-Name: Lawrence Amaning. ID: 91501240 PIN: 1318
-Name: Getrude Asare Acquah. ID: 30138138 PIN: 4457
-Name: Ansah Blessing. ID: 89201899 PIN: 7692
-Name: Aseda sekyere Afful. ID: 73172758 PIN: 2747
-Name: Christiana Sam. ID: 18866059 PIN: 1773
-Name: De - Clerk Abban. ID: 66283782 PIN: 4701
-Name: Elvis F. Bruno. ID: 25463615 PIN: 5824
-Name: Mariam Maame Yaba Bruno. ID: 59386215 PIN: 1719
-Name: Frank Anno Bruno. ID: 63117553 PIN: 6450
-Name: Lydia Nana Esi Ayim. ID: 29786967 PIN: 3397
-Name: Ekua Affoa. ID: 38028012 PIN: 4379
-Name: Clara Nyamevor. ID: 51970332 PIN: 7191
-Name: Elsa Adwoa Sem Dadzie. ID: 86267315 PIN: 6865
-Name: Nafiisah Salisu. ID: 49063545 PIN: 5407
-Name: Hamdallah Osman Pelpuo. ID: 92115772 PIN: 8209
 
 
+new one
+Student Import Log
+==================================================
 
-Name: Priscilla Mensah. ID: 17588415 PIN: 7830
-Name: Felix K. Asamoah. ID: 79789274 PIN: 1127
-Name: Shantel Akosua Boakye Nyamekye. ID: 68404435 PIN: 1176
-Name: Ekua Ofori Boahene. ID: 58892894 PIN: 9223
-Name: Prince Obuakoh Okyere. ID: 21989648 PIN: 7899
-Name: Juliet Biney. ID: 38263642 PIN: 4264
-Name: Naah Shelly Tetteh. ID: 38640765 PIN: 4223
-Name: Wisdom Donkoh. ID: 84961234 PIN: 3291
-Name: Raynard Donkoh. ID: 82081092 PIN: 5796
-Name: Obrengpong Adriel. ID: 33967805 PIN: 5404
-Name: Samuel Dickson Arthur. ID: 82746298 PIN: 6594
-Name: Henry Adamtey. ID: 61802744 PIN: 1453
-Name: Anabel Mensah. ID: 30354735 PIN: 6616
-Name: Kojo Prah. ID: 97282321 PIN: 4479
-Name: Moses Dazie. ID: 40547698 PIN: 5258
-Name: Naadom Yeboah. ID: 17732644 PIN: 8873
-
-
-
-Name: Elvis Anobil. ID: 93429514 PIN: 4073
-Name: Reginald Addo. ID: 21613310 PIN: 8418
-Name: Theodore Addo. ID: 81380405 PIN: 3018
-Name: Mercy Otabil. ID: 32738444 PIN: 7278
-Name: Acquah Princess. ID: 47179622 PIN: 8916
-Name: Randy Otoo. ID: 74856870 PIN: 1290
-Name: Samuel Arthur. ID: 33089681 PIN: 9728
-Name: Joycelyn N. Amankwanor. ID: 39449237 PIN: 8445
-
-
-
-Name: Donatella A. Amankwanor. ID: 16217683 PIN: 7451
-Name: Clara Yeboah. ID: 22508299 PIN: 3576
-Name: Nkumin Aheawa Odoom. ID: 45166366 PIN: 9638
-Name: Ansah Kwesi. ID: 92469106 PIN: 5143
-Name: Bohyeba Aboagye Odoom. ID: 24730372 PIN: 9501
-Name: Estherline Ansah. ID: 83835480 PIN: 1297
-Name: Kofi Sika-pa Boateng. ID: 46609711 PIN: 6476
-Name: Emmanuella Asherow. ID: 37643579 PIN: 2755
-Name: Kingsley Asare Acquah. ID: 48933969 PIN: 4089
-Name: Theresah Agyrey. ID: 38131714 PIN: 4084
-Name: Edward Mintah. ID: 55049406 PIN: 9897
-Name: Mildred Arkoh. ID: 89762505 PIN: 4360
-Name: George Yeboah. ID: 50389954 PIN: 4284
-Name: Julia Yeboah. ID: 41801738 PIN: 4192
+Name: Mary Andoh. ID: 32205258 PIN: 2190
+Name: Nyame Adu Kontor. ID: 45637042 PIN: 5320
+Name: Kenzel Opare Addo. ID: 76519092 PIN: 3475
+Name: Caleb Adjei Mensah. ID: 97683011 PIN: 7037
+Name: Elizabeth Asamoah Larbi. ID: 12433249 PIN: 4151
+Name: Dora Asamoah Larbi. ID: 63863398 PIN: 4423
+Name: Emmanuel Asamoah Larbi. ID: 79007515 PIN: 7413
+Name: George Yeboah. ID: 18242697 PIN: 6915
+Name: Julia Yeboah. ID: 59458967 PIN: 3793
+Name: Mildred Arkoh. ID: 81612012 PIN: 4727
+Name: Elvis Anobil. ID: 39894871 PIN: 6592
+Name: Reginald Addo. ID: 15434506 PIN: 7188
+Name: Theodore Addo. ID: 28683551 PIN: 7128
+Name: Mercy Otabil. ID: 75801430 PIN: 9938
+Name: Acquah Princess. ID: 48008027 PIN: 9512
+Name: Randy Otoo. ID: 60545566 PIN: 9316
+Name: Samuel Arthur. ID: 55306309 PIN: 3239
+Name: Joycelyn N. Amankwanor. ID: 39420753 PIN: 1470
+Name: Donatella A. Amankwanor. ID: 46894884 PIN: 7459
+Name: Clara Yeboah. ID: 26341931 PIN: 6107
+Name: Nkumin Aheawa Odoom. ID: 55368550 PIN: 8848
+Name: Ansah Kwesi. ID: 61641129 PIN: 9416
+Name: Bohyeba Aboagye Odoom. ID: 42905359 PIN: 1072
+Name: Estherline Ansah. ID: 22061637 PIN: 4690
+Name: Kofi Sika-pa Boateng. ID: 70554387 PIN: 2880
+Name: Emmanuella Asherow. ID: 79321818 PIN: 2034
+Name: Kingsley Asare Acquah. ID: 85606897 PIN: 8669
+Name: Theresah Agyrey. ID: 62664233 PIN: 1626
+Name: Edward Mintah. ID: 68687560 PIN: 8651
+Name: Homey Benedict Harrison. ID: 62343580 PIN: 2185
+Name: Precious Mamle Fosu. ID: 26762522 PIN: 5848
+Name: God's Brin Nimaffull. ID: 69063656 PIN: 5766
+Name: Christodia Tonette Boah. ID: 78366940 PIN: 1123
+Name: Joel Kofi Biney. ID: 63093187 PIN: 2942
+Name: Cressida Nkunim Acquah. ID: 91026830 PIN: 2716
+Name: Christabel Arthur. ID: 33969862 PIN: 5729
+Name: Emmanuel Kojo Yeboah Ampofo. ID: 15540323 PIN: 2719
+Name: Nhyiraba Kwabena Arthur. ID: 91159067 PIN: 3873
+Name: Jason Asare - Asiedu. ID: 70711128 PIN: 4008
+Name: Hannah Agboba. ID: 35171792 PIN: 4552
+Name: Emmanuella Quaicoe. ID: 34760423 PIN: 1186
+Name: Henry Amoasie. ID: 90121583 PIN: 6470
+Name: Micheal Anakwah Kyei. ID: 78812577 PIN: 9568
+Name: Heward Nana Nkaso Sule. ID: 64029669 PIN: 5197
+Name: Rebecca Okyere. ID: 77125339 PIN: 6179
+Name: Mikayla Yireh Adjei. ID: 51156312 PIN: 4098
+Name: Richiel Owusua Hammond. ID: 93449020 PIN: 4705
+Name: Goodluck Solomon Asherow. ID: 62263612 PIN: 7645
+Name: Patrick K. Asare. ID: 32647943 PIN: 2229
+Name: Kelvin Fiifi Sam. ID: 12836765 PIN: 8253
+Name: Justice K. Amoanyi. ID: 55140537 PIN: 6417
+Name: Petra Esinam Ahiable. ID: 33912925 PIN: 2267
+Name: Emmanuel Mawuli Kwesi Ahiable. ID: 43916822 PIN: 1530
+Name: Elvis Saviour Kobina Mintah. ID: 62895377 PIN: 4447
+Name: Eugene Paul Arhin Mintah. ID: 11728241 PIN: 7590
+Name: Meshack Ofosu. ID: 55488301 PIN: 7646
+Name: Emmanuel Annan. ID: 32267900 PIN: 1943
+Name: Josephine Dadzie. ID: 61217494 PIN: 4221
+Name: Dorinda Abena N. A.. ID: 87698933 PIN: 1675
+Name: Jayden Amon Quaye. ID: 79630322 PIN: 7625
+Name: Ann Ofosu. ID: 54853303 PIN: 7242
+Name: Erica Appea-Apreku Owiredu. ID: 66581179 PIN: 6867
+Name: Twerenyame Boakye Gyan Sekyere. ID: 16063171 PIN: 8204
+Name: Daniel Adu Ampofo. ID: 21260603 PIN: 4809
+Name: Juliana Opamfowa Sam Arthur. ID: 73513663 PIN: 2478
+Name: Fred Nhyiraba Obeng. ID: 64248636 PIN: 2932
+Name: Chief Amoanyi Quansah. ID: 90675842 PIN: 4591
+Name: Gabriel Anti Dadzie. ID: 42761199 PIN: 7329
+Name: Mildred Illyn Appah-Kum. ID: 68939056 PIN: 8539
+Name: Maame Esi Ansekua Amoaku. ID: 22492389 PIN: 7021
+Name: Prince Ganyo. ID: 73377426 PIN: 7688
+Name: Christabel Arkoh. ID: 87741992 PIN: 3661
+Name: Neriah Nana Efya Bassoah. ID: 14596417 PIN: 1056
+Name: Michealina Ganyo. ID: 72506022 PIN: 7873
+Name: Erica Ganyo. ID: 29979237 PIN: 5211
+Name: Dennis Marfo. ID: 52194714 PIN: 2859
+Name: Perpetual Koomson. ID: 30208009 PIN: 1604
+Name: Lawrence Amaning. ID: 51896287 PIN: 4468
+Name: Getrude Asare Acquah. ID: 63494165 PIN: 8868
+Name: Ansah Blessing. ID: 86333734 PIN: 4927
+Name: Aseda sekyere Afful. ID: 71456467 PIN: 4132
+Name: Christiana Sam. ID: 11638265 PIN: 3039
+Name: De - Clerk Abban. ID: 84212271 PIN: 9332
+Name: Elvis F. Bruno. ID: 11534062 PIN: 1247
+Name: Mariam Maame Yaba Bruno. ID: 84126021 PIN: 8456
+Name: Frank Anno Bruno. ID: 47152295 PIN: 6399
+Name: Lydia Nana Esi Ayim. ID: 52814137 PIN: 3661
+Name: Ekua Affoa. ID: 56932090 PIN: 6178
+Name: Clara Nyamevor. ID: 63488156 PIN: 1149
+Name: Elsa Adwoa Sem Dadzie. ID: 68561180 PIN: 9105
+Name: Nafiisah Salisu. ID: 82796084 PIN: 3119
+Name: Hamdallah Osman Pelpuo. ID: 72757153 PIN: 4255
+Name: Felix K. Asamoah. ID: 14443193 PIN: 7738
+Name: Shantel Akosua Boakye Nyamekye. ID: 71925492 PIN: 4276
+Name: Ekua Ofori Boahene. ID: 77961836 PIN: 4698
+Name: Prince Obuakoh Okyere. ID: 56639662 PIN: 9200
+Name: Juliet Biney. ID: 76055962 PIN: 4824
+Name: Naah Shelly Tetteh. ID: 86586155 PIN: 2147
+Name: Wisdom Donkoh. ID: 80962223 PIN: 2758
+Name: Raynard Donkoh. ID: 15042862 PIN: 6829
+Name: Obrengpong Adriel. ID: 74192998 PIN: 7553
+Name: Samuel Dickson Arthur. ID: 65832496 PIN: 9055
+Name: Henry Adamtey. ID: 63183385 PIN: 9506
+Name: Anabel Mensah. ID: 20031484 PIN: 8458
+Name: Kojo Prah. ID: 76814888 PIN: 1204
+Name: Naadom Yeboah. ID: 69197079 PIN: 1910
 
 Import Completed.
 
 Student Import Log
 ==================================================
 
-Name: Elizabeth Asamoah Larbi. ID: 87046534 PIN: 2513
-Name: Dora Asamoah Larbi. ID: 51067134 PIN: 5397
-Name: Emmanuel Asamoah Larbi. ID: 67416372 PIN: 2600
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-
-Student Import Log
-==================================================
-
-Name: Caleb Adjei Mensah. ID: 30169650 PIN: 2952
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-Name: Kenzel Opare Addo. ID: 36390781 PIN: 2618
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-Name: Mary Andoh. ID: 24094659 PIN: 7442
-Name: Aseda Essandoah. ID: 27775392 PIN: 1554
-Name: Comfort Adu-Yeboah. ID: 15571803 PIN: 8217
-Name: Nyame Adu Kontor. ID: 55704577 PIN: 8700
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-Name: Blessing Offei. ID: 30417906 PIN: 4824
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-Name: EMMA AIDOO. ID: 53450245 PIN: 9821
-Name: Albert Aidoo. ID: 15745229 PIN: 8596
-
-Student Import Log
-==================================================
-
-
-Student Import Log
-==================================================
-
-Name: Anabel Mensah. ID: 88467488 PIN: 1528
-Name: Kojo Prah. ID: 77994608 PIN: 9954
-
-Student Import Log
-==================================================
-
-
-Student Import Log
-==================================================
-
-
-Student Import Log
-==================================================
-
-
-Student Import Log
-==================================================
-
-Name: king kong. ID: 34249421 PIN: 5150
-
-Student Import Log
-==================================================
-
-
-Import Completed.
-✅ Successfully imported or updated 4 students.
-
-Student Import Log
-==================================================
-
-Name: Cailo. ID: 14547712 PIN: 3257
-
-Import Completed.
-
-Student Import Log
-==================================================
-
-Name: Florence Osam Bentil. ID: 61985282 PIN: 7637
+Name: Priscilla Mensah. ID: 75424840 PIN: 9576
+Name: Annabelle Esaawa Mensah. ID: 56405407 PIN: 7336
+Name: Nana Kojo Prah Mensah. ID: 80727310 PIN: 4825
+Name: Moses Dadzie. ID: 28748610 PIN: 7685
+Name: Aseda Essandoah. ID: 53544304 PIN: 3777
+Name: Comfort Adu-Yeboah. ID: 64444076 PIN: 6682
+Name: Nyamekye Adu Kontor. ID: 54037974 PIN: 3790
+Name: Blessing Offei. ID: 60239280 PIN: 3430
+Name: Kojo Appianing. ID: 68032110 PIN: 6724
+Name: kelvin Nyarko. ID: 56106821 PIN: 3785
+Name: Florence Osam Bentil. ID: 77818602 PIN: 7048
+Name: Cailo. ID: 19059253 PIN: 9412
 
 Import Completed.
