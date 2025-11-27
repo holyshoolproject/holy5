@@ -109,10 +109,22 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
+
+
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
+        'PASSWORD': 'AVNS_gCZOWpO1VpXZZqXUkIs',
+        'HOST': 'pg-15ceabe-phevab1-9f77.g.aivencloud.com',
+        'PORT': '24955',
+        'OPTIONS': {
+            'sslmode': 'require'
+        }
     }
 }
 
@@ -121,11 +133,16 @@ DATABASES = {
 
 
 
-
-
-
-
 '''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
+    }
+}
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
