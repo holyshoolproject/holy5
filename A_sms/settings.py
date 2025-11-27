@@ -114,19 +114,19 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 
 
 
+# settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'defaultdb',
-        'USER': 'avnadmin',
-        'PASSWORD': 'AVNS_gCZOWpO1VpXZZqXUkIs',
-        'HOST': 'pg-15ceabe-phevab1-9f77.g.aivencloud.com',
-        'PORT': '24955',
-        'OPTIONS': {
-            'sslmode': 'require'
-        }
+        'NAME': 'kyvitgptoovluunjsvtj',
+        'USER': 'ttoodyutpzsjoacpncbx',
+        'PASSWORD': 'bumuoziarakiksqgqdsastmqfpwlol',
+        'HOST': '9qasp5v56q8ckkf5dc.leapcellpool.com',
+        'PORT': '6438',
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
+
 
 
 
