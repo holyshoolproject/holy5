@@ -202,4 +202,4 @@ class Payment(models.Model):
             if parent_phone:
                 print("Sending SMS...")
                 print(message)
-                #Thread(target=send_sms, args=(parent_phone, message)).start()
+                Thread(target=send_sms, args=(parent_phone, message)).start()

@@ -128,4 +128,4 @@ class FamilyPayment(models.Model):
                 parent_phone = first_member.student_profile.contact_of_father
                 if parent_phone:
                     print("sent to:", parent_phone)
-                    #Thread(target=send_sms, args=(parent_phone, message)).start()
+                    Thread(target=send_sms, args=(parent_phone, message)).start()

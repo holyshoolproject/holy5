@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zh&=1o&!tr2v6x3m05^(1xyaz9s+6wkz7kvf5jojeh!aee5_bn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
@@ -114,7 +114,6 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 
 
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -132,6 +131,7 @@ DATABASES = {
 
 
 
+
 '''
 DATABASES = {
     'default': {
@@ -139,6 +139,15 @@ DATABASES = {
         'NAME': BASE_DIR / "db.sqlite3",
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 # settings.py
