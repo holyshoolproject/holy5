@@ -42,6 +42,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     ]
 
     role = models.CharField(choices=ROLE_CHOICES, max_length=20)
+    pin = models.CharField(max_length=20, null=True, blank=True)
     user_id = models.CharField(max_length=20, unique=True)
     full_name = models.CharField(max_length=222)
     is_active = models.BooleanField(default=True)

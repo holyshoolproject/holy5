@@ -1,0 +1,7 @@
+POST http://127.0.0.1:8000/api/student/terms/
+Content-Type: application/json
+
+{
+  "name": "2nd Term",
+  "academic_year_id": 2
+}

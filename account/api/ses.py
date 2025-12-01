@@ -7,26 +7,41 @@ class UserSerializerForCreateUser(serializers.ModelSerializer):
     user_id = serializers.CharField(read_only=True)  # auto-generated
     password = serializers.CharField(write_only=True, required=False)  # optional, for DRF
 
+    def validate_gender(self, value):
+        return value.lower().strip() 
+    
     class Meta:
         model = User
-        fields = ["user_id", "full_name", "gender", "date_of_birth", "nationality", "role", "password"]
+        fields = ["id", "user_id", "pin", "full_name", "gender", "date_of_birth", "nationality", "role", "password", "is_active"]
 
 
 class UserSerializerForPayments(serializers.ModelSerializer):
+
+    def validate_gender(self, value):
+        return value.lower().strip() 
+    
+    
     class Meta:
         model = User
         fields = [
             "full_name"
         ]
+    
 
         
 
 class UserSerializer(serializers.ModelSerializer):
+
+    def validate_gender(self, value):
+        return value.lower().strip() 
+    
+
     class Meta:
         model = User
         fields = [
             "id",
-            "user_id",        # or whatever your User model field is
+            "user_id", 
+            "pin",      
             "full_name",
             "role",
             "gender",

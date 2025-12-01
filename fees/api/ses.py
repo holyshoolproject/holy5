@@ -86,7 +86,7 @@ class StudentFeeRecordSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         # Incoming payload from frontend (for visibility during debugging)
-        print("Frontend payload received in StudentFeeRecord serializer:", validated_data)
+
 
         # Pop the IDs to assign FK relations
         student = validated_data.pop("student_id")
@@ -155,7 +155,7 @@ class PaymentSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         # Incoming payload from frontend (for visibility during debugging)
-        print("Frontend payload received in Payment serializer:", validated_data)
+  
 
         # Pop the write-only FK ID and attach the relation
         student_fee_record = validated_data.pop("student_fee_record_id")

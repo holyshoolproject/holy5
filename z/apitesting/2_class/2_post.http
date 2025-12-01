@@ -1,0 +1,7 @@
+POST http://127.0.0.1:8000/api/student/classes/
+Content-Type: application/json
+
+{
+  "name": "jhs 3",
+  "user_id": 1
+}

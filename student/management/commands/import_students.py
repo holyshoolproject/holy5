@@ -97,7 +97,7 @@ class Command(BaseCommand):
 
                 # If we reach an empty or invalid full_name, stop importing
                 if not full_name or full_name.lower() in ['nan', 'nat', 'none']:
-                    print(f"Reached empty row at index {index}. Import stopped.")
+              
                     break
 
                 # Check if a user with this full name already exists

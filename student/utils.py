@@ -34,7 +34,7 @@ def clean_phone(value):
     return value
 
 def import_students_from_excel(file_path):
-    print(f"Importing students fromeeeeeeeeee: {file_path}")
+
     """Import or update students from an Excel file."""
     if not os.path.exists(file_path):
         return f"❌ File not found: {file_path}"
