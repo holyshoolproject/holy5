@@ -142,8 +142,8 @@ class Command(BaseCommand):
                     log_file.write(message + "\n")
 
 
-                # Wait a few seconds for signal to create StudentProfile
-                time.sleep(2)
+              
+            
 
                 # Fetch and update StudentProfile
                 try:
@@ -184,6 +184,7 @@ class Command(BaseCommand):
                         profile.current_class = 1
 
                     profile.save()
+                    print(f"True Profile updated for user {user.full_name}")
 
                     
                 except StudentProfile.DoesNotExist:

@@ -161,3 +161,15 @@ Name: Kojo Prah. ID: 47605506 PIN: 2875
 Name: Naadom Yeboah. ID: 14626267 PIN: 1081
 
 Import Completed.
+
+Student Import Log
+==================================================
+
+
+Import Completed.
+
+Student Import Log
+==================================================
+
+
+Import Completed.

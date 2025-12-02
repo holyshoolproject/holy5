@@ -6,6 +6,10 @@ from .ses import (
     PaymentSerializer
 )
 
+from rest_framework.response import Response
+from django.urls import reverse
+
+
 
 class FeeStructureViewSet(viewsets.ModelViewSet):
     queryset = FeeStructure.objects.all()
@@ -37,3 +41,16 @@ class PaymentViewSet(viewsets.ModelViewSet):
             )
 
         )
+    
+    def create(self, request, *args, **kwargs):
+            print("Creating Payment with data:", request.data)
+            response = super().create(request, *args, **kwargs)
+            payment_id = response.data.get('id')
+            if payment_id:               
+                
+                response.data['receipt_url'] = request.build_absolute_uri(
+                    reverse('payment-receipt', kwargs={'pk': payment_id})
+                )
+
+            return response
+
