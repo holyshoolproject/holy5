@@ -110,24 +110,7 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kyvitgptoovluunjsvtj',
-        'USER': 'ttoodyutpzsjoacpncbx',
-        'PASSWORD': 'bumuoziarakiksqgqdsastmqfpwlol',
-        'HOST': '9qasp5v56q8ckkf5dc.leapcellpool.com',
-        'PORT': '6438',
-        'OPTIONS': {'sslmode': 'require'}
-    }
-}
 
-
-
-
-
-
-'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -140,11 +123,7 @@ DATABASES = {
 
 
 
-
-
-
-
-
+'''
 
 
 
@@ -152,50 +131,13 @@ DATABASES = {
 # settings.py
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'king',
-        'USER': 'neondb_owner',
-        'PASSWORD': 'npg_oHFXtd4vbi9K',
-        'HOST': 'ep-dry-term-afplpb09-pooler.c-2.us-west-2.aws.neon.tech',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',
-            'channel_binding': 'require',
-        },
-    }
-}
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.dgqfzkaafqiosmvdotgi',
-        'PASSWORD': 'Uncleproton1.',
-        'HOST': 'aws-1-eu-central-1.pooler.supabase.com',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',
-        },
-    }
-}
 
 
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'king_local',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+
+
 
 '''
 

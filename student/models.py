@@ -14,21 +14,46 @@ class StudentProfile(models.Model):
     ]
 
     CURRENT_CLASS_CHOICES = [
-        (1, 'creche'),
-        (2, 'nursery 1'),
-        (3, 'nursery 2'),
-        (4, 'kg 1'),
-        (5, 'kg 2'),
-        (6, 'class 1'),
-        (7, 'class 2'),
-        (8, 'class 3'),
-        (9, 'class 4'),
-        (10, 'class 5'),
-        (11, 'class 6'),
-        (12, 'jhs 1'),
-        (13, 'jhs 2'),
-        (14, 'jhs 3'),
-    ]
+    (1, 'Creche'),
+
+    (2, 'Nursery 1A'),
+    (3, 'Nursery 1B'),
+
+    (4, 'Nursery 2A'),
+    (5, 'Nursery 2B'),
+
+    (6, 'KG 1A'),
+    (7, 'KG 1B'),
+
+    (8, 'KG 2A'),
+    (9, 'KG 2B'),
+
+    (10, 'Basic 1A'),
+    (11, 'Basic 1B'),
+
+    (12, 'Basic 2A'),
+    (13, 'Basic 2B'),
+
+    (14, 'Basic 3A'),
+    (15, 'Basic 3B'),
+
+    (16, 'Basic 4A'),
+    (17, 'Basic 4B'),
+
+    (18, 'Basic 5A'),
+    (19, 'Basic 5B'),
+
+    (20, 'Basic 6A'),
+    (21, 'Basic 6B'),
+
+    (22, 'Basic 7A'),
+    (23, 'Basic 7B'),
+
+    (24, 'Basic 8'),
+    (25, 'Basic 9'),
+]
+
+
 
     CLASS_CHOICES = [
         ('creche', 'creche'),
@@ -88,22 +113,47 @@ class StudentProfile(models.Model):
 
 
 class GradeClass(models.Model):
+    
     CLASS_CHOICES = [
-        ('creche', 'creche'),
-        ('nursery 1', 'nursery 1'),
-        ('nursery 2', 'nursery 2'),
-        ('kg 1', 'kg 1'),
-        ('kg 2', 'kg 2'),
-        ('class 1', 'class 1'),
-        ('class 2', 'class 2'),
-        ('class 3', 'class 3'),
-        ('class 4', 'class 4'),
-        ('class 5', 'class 5'),
-        ('class 6', 'class 6'),
-        ('jhs 1', 'jhs 1'),
-        ('jhs 2', 'jhs 2'),
-        ('jhs 3', 'jhs 3'),
-    ]
+    ('creche', 'Creche'),
+
+    ('nursery 1A', 'Nursery 1A'),
+    ('nursery 1B', 'Nursery 1B'),
+
+    ('nursery 2A', 'Nursery 2A'),
+    ('nursery 2B', 'Nursery 2B'),
+
+    ('kg 1A', 'KG 1A'),
+    ('kg 1B', 'KG 1B'),
+
+    ('kg 2A', 'KG 2A'),
+    ('kg 2B', 'KG 2B'),
+
+    ('basic 1A', 'Basic 1A'),
+    ('basic 1B', 'Basic 1B'),
+
+    ('basic 2A', 'Basic 2A'),
+    ('basic 2B', 'Basic 2B'),
+
+    ('basic 3A', 'Basic 3A'),
+    ('basic 3B', 'Basic 3B'),
+
+    ('basic 4A', 'Basic 4A'),
+    ('basic 4B', 'Basic 4B'),
+
+    ('basic 5A', 'Basic 5A'),
+    ('basic 5B', 'Basic 5B'),
+
+    ('basic 6A', 'Basic 6A'),
+    ('basic 6B', 'Basic 6B'),
+
+    ('basic 7A', 'Basic 7A'),
+    ('basic 7B', 'Basic 7B'),
+
+    ('basic 8', 'Basic 8'),
+    ('basic 9', 'Basic 9'),
+]
+
     name = models.CharField(choices=CLASS_CHOICES, max_length=40, verbose_name="Class")
     staff = models.ForeignKey(StaffProfile, on_delete=models.SET_NULL, null=True, blank=False, verbose_name="Teacher") 
 

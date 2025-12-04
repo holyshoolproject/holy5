@@ -1,0 +1,4 @@
+auths
+model the  A B class proper
+remove everything kog
+fetch only active student
