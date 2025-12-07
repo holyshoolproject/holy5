@@ -60,6 +60,7 @@ INSTALLED_APPS = [
 
     # third party
      'rest_framework',
+     'rest_framework.authtoken',
 
 
 
@@ -205,3 +206,30 @@ JAZZMIN_UI_TWEAKS = {
 MNOTIFY_API_KEY = "PbaAXEQmt7R7i7apnauFMMwFD"
 MNOTIFY_SENDER_ID = "King Of Glory School"  # customize as needed
 MNOTIFY_URL = "https://api.mnotify.com/api/sms/quick"
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.auth_backends.UserIdOrEmailBackend',  # <- backend handles login_id
+]
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # other classes if needed
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
+
+#  email configurtion
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "phevab1@gmail.com"
+EMAIL_HOST_PASSWORD = "pxoniqqxstkmnjmi"
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = "phevab1@gmail.com"

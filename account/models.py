@@ -32,6 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         ('student', 'student'),
         ('staff', 'staff'),
         ('principal', 'principal'),
+        ('administrator', 'administrator'),
 
     ]
 
@@ -50,7 +51,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10,null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
     nationality = models.CharField(max_length=30, null=True, blank=True)
-    
+    email = models.EmailField(unique=True, null=True, blank=True) 
 
     objects = CustomUserManager()
 

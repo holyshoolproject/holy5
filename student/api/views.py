@@ -19,6 +19,11 @@ class GradeClassViewSet(ModelViewSet):
     queryset = GradeClass.objects.all()
     serializer_class = GradeClassSerializer
 
+    def create(self, request, *args, **kwargs):
+        print("Incoming request data:", request.data)
+        return super().create(request, *args, **kwargs)
+
+
 
 class AcademicYearViewSet(ModelViewSet):
     queryset = AcademicYear.objects.all()
