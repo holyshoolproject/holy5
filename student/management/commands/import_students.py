@@ -74,7 +74,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         # Path to Excel file inside app folder
-        excel_file = os.path.join(settings.BASE_DIR, 'student', 'kogdata.xlsx')
+        excel_file = os.path.join(settings.BASE_DIR, 'student', 'holy_data.xlsx')
 
         if not os.path.exists(excel_file):
             self.stdout.write(self.style.ERROR(f"Excel file not found: {excel_file}"))
@@ -106,9 +106,8 @@ class Command(BaseCommand):
                 if user:
                     print(f"User {full_name} already exists, profile updated")
                     # Update existing user details
-                    user.gender = row.get('gender', user.gender)
-                    user.date_of_birth = excel_to_date(row.get('date_of_birth')) or user.date_of_birth
-                    user.nationality = row.get('nationality', user.nationality)
+                    
+                    
                     user.role = row.get('role', user.role)
                     user.save()
 
@@ -126,9 +125,8 @@ class Command(BaseCommand):
                     user = User.objects.create(
                     user_id=user_id,
                     full_name=full_name,
-                    gender=row.get('gender'),
-                    date_of_birth=excel_to_date(row.get('date_of_birth')),
-                    nationality=row.get('nationality'),
+                   
+                  
                     role=row.get('role', 'student'),
                 )
 
@@ -148,40 +146,40 @@ class Command(BaseCommand):
                 # Fetch and update StudentProfile
                 try:
                     profile = StudentProfile.objects.get(user=user)
-                    profile.last_school_attended = row.get('last_school_attended')
-                    profile.class_seeking_admission_to = row.get('class_seeking_admission_to')
-                    profile.is_immunized = row.get('is_immunized')
-                    profile.has_allergies = row.get('has_allergies')
-                    profile.allergic_foods = row.get('allergic_foods')
-                    profile.has_peculiar_health_issues = row.get('has_peculiar_health_issues')
-                    profile.health_issues = row.get('health_issues')
-                    profile.other_related_info = row.get('other_related_info')
-                    profile.name_of_father = row.get('name_of_father')
-                    profile.name_of_mother = row.get('name_of_mother')
-                    profile.occupation_of_father = row.get('occupation_of_father')
-                    profile.occupation_of_mother = row.get('occupation_of_mother')
-                    profile.nationality_of_father = row.get('nationality_of_father')
-                    profile.nationality_of_mother = row.get('nationality_of_mother')
+                    #profile.last_school_attended = row.get('last_school_attended')
+                    #profile.class_seeking_admission_to = row.get('class_seeking_admission_to')
+                    #profile.is_immunized = row.get('is_immunized')
+                    #profile.has_allergies = row.get('has_allergies')
+                    #profile.allergic_foods = row.get('allergic_foods')
+                    #profile.has_peculiar_health_issues = row.get('has_peculiar_health_issues')
+                    #profile.health_issues = row.get('health_issues')
+                    #profile.other_related_info = row.get('other_related_info')
+                    #profile.name_of_father = row.get('name_of_father')
+                    #profile.name_of_mother = row.get('name_of_mother')
+                    #profile.occupation_of_father = row.get('occupation_of_father')
+                    #profile.occupation_of_mother = row.get('occupation_of_mother')
+                    #profile.nationality_of_father = row.get('nationality_of_father')
+                    #profile.nationality_of_mother = row.get('nationality_of_mother')
                     
                     profile.contact_of_father = clean_phone(row.get('contact_of_father'))
                     profile.contact_of_mother = clean_phone(row.get('contact_of_mother'))
 
 
                     
-                    profile.house_number = row.get('house_number')
+                    #profile.house_number = row.get('house_number')
                     # Handle current_class name conversion
-                    current_class_raw = row.get('current_class')
-                    current_class_name = str(current_class_raw).strip().lower() if pd.notna(current_class_raw) else ""
-                    if current_class_name and not current_class_name.isdigit():
-                        current_class_value = CLASS_NAME_TO_NUMBER.get(current_class_name)
-                        if current_class_value:
-                            profile.current_class = current_class_value
-                        else:
-                            print(f"Warning: Unknown class name '{current_class_name}' for user {user.full_name}. Defaulting to 1 (creche).")
-                            profile.current_class = 1
-                    else:
-                        print(f"Missing or invalid current_class '{current_class_raw}' for {full_name}. Defaulting to 1 (creche).")
-                        profile.current_class = 1
+                    profile.current_class = row.get('current_class')
+                    #current_class_name = str(current_class_raw).strip().lower() if pd.notna(current_class_raw) else ""
+                    #if current_class_name and not current_class_name.isdigit():
+                    #    current_class_value = CLASS_NAME_TO_NUMBER.get(current_class_name)
+                    #    if current_class_value:
+                    #        profile.current_class = current_class_value
+                    #    else:
+                    #        print(f"Warning: Unknown class name '{current_class_name}' for user {user.full_name}. Defaulting to 1 (creche).")
+                    #        profile.current_class = 1
+                    #else:
+                    #    print(f"Missing or invalid current_class '{current_class_raw}' for {full_name}. Defaulting to 1 (creche).")
+                    #    profile.current_class = 1
 
                     profile.save()
                     print(f"True Profile updated for user {user.full_name}")

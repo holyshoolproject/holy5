@@ -16,6 +16,11 @@ class FeeStructure(models.Model):
     grade_class = models.ForeignKey(GradeClass, on_delete=models.CASCADE)
     term = models.ForeignKey("student.Term", on_delete=models.CASCADE)
     amount = models.DecimalField(max_digits=10, decimal_places=2)  # e.g. 1200.00
+    is_discounted = models.BooleanField(default=False)
+    discounted_student_ids = models.ManyToManyField(StudentProfile, blank=True)
+   
+    # studen payit
+
 
     class Meta:
 
@@ -202,4 +207,4 @@ class Payment(models.Model):
             if parent_phone:
                 print("Sending SMS...")
                 print(message)
-                Thread(target=send_sms, args=(parent_phone, message)).start()
+                #Thread(target=send_sms, args=(parent_phone, message)).start()

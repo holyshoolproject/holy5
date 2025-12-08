@@ -37,7 +37,8 @@ class StudentProfileSerializer(serializers.ModelSerializer):
         model = StudentProfile
         fields = [
             "id",
-            "user",           
+            "user",
+            "is_discounted_student",           
             "current_class",
             "last_school_attended",
             "class_seeking_admission_to",
@@ -73,7 +74,7 @@ class StudentProfileCreateUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = StudentProfile
-        fields = ["id", "current_class", "user", "last_school_attended", "class_seeking_admission_to", "is_immunized",
+        fields = ["id", "current_class", "is_discounted_student", "user", "last_school_attended", "class_seeking_admission_to", "is_immunized",
                   "has_allergies", "allergic_foods", "has_peculiar_health_issues", "health_issues",
                   "other_related_info", "name_of_father", "name_of_mother", "occupation_of_father",
                   "occupation_of_mother", "nationality_of_father", "nationality_of_mother",
@@ -89,6 +90,8 @@ class StudentProfileCreateUserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         try:
             user_data = validated_data.pop("user")
+            is_discounted_student = validated_data.get("is_discounted_student")
+            print("is_discounted_student:", is_discounted_student)
 
             import random
 

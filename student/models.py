@@ -81,6 +81,7 @@ class StudentProfile(models.Model):
     class_seeking_admission_to = models.CharField(max_length=20, choices=CLASS_CHOICES, null=True, blank=True)
     
     is_immunized = models.CharField(max_length=200, null=True, blank=True)
+    is_discounted_student = models.BooleanField(default=False)
     
     has_allergies = models.CharField(max_length=10, choices=YES_NO_CHOICES, null=True, blank=True)
     

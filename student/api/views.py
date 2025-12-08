@@ -55,10 +55,10 @@ class StudentCreateProfileViewSet(ModelViewSet):
     queryset = StudentProfile.objects.all()
     serializer_class = StudentProfileCreateUserSerializer
 
-   # def dispatch(self, request, *args, **kwargs):
-    #    print("\n[DISPATCH] HIT")
-     #   print("[DISPATCH] method:", request.method)
-      #  print("[DISPATCH] path:", request.path)
-       # print("[DISPATCH] content_type:", request.content_type)
-        #print("[DISPATCH] raw body:", request.body.decode('utf-8') if request.body else "<empty>")
-        #return super().dispatch(request, *args, **kwargs)
+    def dispatch(self, request, *args, **kwargs):
+        print("\n[DISPATCH] HIT")
+        print("[DISPATCH] method:", request.method)
+        print("[DISPATCH] path:", request.path)
+        print("[DISPATCH] content_type:", request.content_type)
+        print("[DISPATCH] raw body:", request.body.decode('utf-8') if request.body else "<empty>")
+        return super().dispatch(request, *args, **kwargs)

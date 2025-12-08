@@ -11,9 +11,21 @@ from django.urls import reverse
 
 
 
+from rest_framework import viewsets
+
+
 class FeeStructureViewSet(viewsets.ModelViewSet):
     queryset = FeeStructure.objects.all()
     serializer_class = FeeStructureSerializer
+
+    def dispatch(self, request, *args, **kwargs):
+        print("\n[REQUEST HIT]")
+        print("Method:", request.method)
+        print("Path:", request.path)
+        print("Headers:", request.headers)
+        print("Body:", request.body.decode("utf-8") if request.body else "<empty>")
+        return super().dispatch(request, *args, **kwargs)
+
 
 
 class StudentFeeRecordViewSet(viewsets.ModelViewSet):
