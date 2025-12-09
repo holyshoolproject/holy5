@@ -5,3 +5,100 @@ fetch only active student
 remember to change the send email url to the production frontend url
 model and payments for discounted students
 bulk deletes
+fix all receipts
+
+principal should create and monitor admins and staff
+
+
+
+
+/////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////
+
+6. Teacher & Staff Overview
+
+Total number of teachers and staff.
+
+Teacher-to-student ratio.
+
+
+
+
+
+
+9. Visual Analytics
+
+Graphs/charts for quick insights:
+
+Bar chart: Students per class.
+
+Line chart: Fee collection trends.
+
+Pie chart: Attendance or gender distribution.
+
+Heatmaps: Performance per subject/class.
+
+10. Optional Advanced Metrics
+
+Correlation between attendance and academic performance.
+
+Fee arrears vs. academic performance.
+
+Term-over-term improvement metrics.
+
+Essentially, the principal’s section is dashboard-heavy, mostly GET requests, showing summaries, lists, and charts. All actions should be view-only, maybe with filters for class, term, or year.
+
+If you want, I can draft a full Vue/Django dashboard layout for the principal, including the API endpoints and Vue components for each of these sections. It would be ready to plug into your current system.
+
+Do you want me to do that?
+
+You said:
+
+Student Enrollment & Demographics
+
+lets start with 1. 
+ChatGPT said:
+
+Perfect! Let’s focus on Student Enrollment & Demographics first. The goal here is to give the principal a clear picture of who is enrolled, how many, and basic breakdowns.
+
+Data to Show
+
+Total students
+
+Simple total count.
+
+Can also show per academic year or term.
+
+Students per class/grade
+
+Number of students in each grade or class.
+
+Can be shown as a table or bar chart.
+
+Gender distribution
+
+Count of male vs. female students.
+
+Optionally, a pie chart for quick visualization.
+
+Optional: Age distribution
+
+If you track birthdates, you can show ranges (e.g., 6–8 years, 9–11 years).
+
+Histogram or bar chart works well.
+
+Enrollment trends (Optional advanced)
+
+Show how enrollment has changed over past terms or years.
+
+Useful for spotting growth or decline.
+
+API Design (GET requests)
+
+Assuming a Django backend:
+
+Total students

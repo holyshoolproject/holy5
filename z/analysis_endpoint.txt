@@ -1,0 +1,32 @@
+1. Student Enrollment & Demographics
+Total number of students, 
+=> http://127.0.0.1:8000/api/student/students/total/
+grouped by class/grade. 
+=> http://127.0.0.1:8000/api/student/students/per_class/
+
+
+2. Fee Analysis & Financial Overview
+# 1. Expected fees per term 
+=> http://127.0.0.1:8000/api/fees/student-fee-records/expected_fees/
+# 2. Total collected vs pending (overall) academicyear/(per term)   
+=> http://127.0.0.1:8000/api/fees/student-fee-records/collection_summary/
+# 3. Percentage of unpaid students IN EACH CLASS
+=> http://127.0.0.1:8000/api/fees/student-fee-records/unpaid_percentage_by_class/
+# 4. Highlight students with partial / overdue balances
+=> http://127.0.0.1:8000/api/fees/student-fee-records/students_with_balance/
+
+
+
+
+PART 2: FEE STRUCTURE INSIGHTS
+# 1 
+=> http://127.0.0.1:8000/api/fees/fee-structures/common_fee_categories/
+# 2
+=> http://127.0.0.1:8000/api/fees/fee-structures/discounts_applied/
+
+
+
+
+
+
+
