@@ -2,7 +2,7 @@ from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework.authtoken.models import Token
-from .ses import UserLoginSerializer, PasswordResetSerializer, PasswordResetConfirmSerializer, ChangePasswordSerializer
+from .ses import AdministratorSerializer, UserLoginSerializer, PasswordResetSerializer, PasswordResetConfirmSerializer, ChangePasswordSerializer, UserSerializer
 from rest_framework import status, permissions
 from rest_framework.views import APIView
 
@@ -108,3 +108,39 @@ class PasswordResetView(APIView):
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR
                 )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+from rest_framework import viewsets, status
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+from django.contrib.auth import get_user_model
+from account.api.ses import UserSerializerForCreateUser
+
+User = get_user_model()
+
+from rest_framework.viewsets import ModelViewSet
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+class AdministratorViewSet(ModelViewSet):
+    serializer_class = AdministratorSerializer
+
+    def get_queryset(self):
+        return User.objects.filter(role="administrator")
+
+    def perform_create(self, serializer):
+        email = serializer.validated_data.get("email") or serializer.validated_data.get("user_id")
+        serializer.save(
+            role="administrator",
+            user_id=email,  # use the email as user_id
+            email=email,
+            password="TempPassword123!"
+        )
+
+
+
+    def perform_update(self, serializer):
+        # Prevent role change during update
+        serializer.save(role="administrator")

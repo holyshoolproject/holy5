@@ -59,7 +59,7 @@ def send_sms(recipient, message):
 
     data = {
         "recipient": [recipient],
-        "sender": "KingOfGlory",  # must be a verified sender ID on MNotify
+        "sender": "HOLYWELL",  # must be a verified sender ID on MNotify
         "message": message,
         "is_schedule": False,
         "schedule_date": "",
@@ -207,4 +207,4 @@ class Payment(models.Model):
             if parent_phone:
                 print("Sending SMS...")
                 print(message)
-                #Thread(target=send_sms, args=(parent_phone, message)).start()
+                Thread(target=send_sms, args=(parent_phone, message)).start()

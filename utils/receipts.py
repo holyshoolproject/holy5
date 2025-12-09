@@ -20,7 +20,7 @@ def build_payment_receipt(payment, stream, small_on_a4=True):
     # Header
     c.setFont(FONT_BOLD, 14)
     c.setFillColor(colors.HexColor("#0D6EFD"))
-    c.drawString(x, y, "King Of Glory Preparatory School")
+    c.drawString(x, y, "HOLYWELL INTERNATIONAL SCHOOL")
     y -= 10 * mm
 
     c.setFont(FONT_BOLD, 12)

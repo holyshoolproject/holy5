@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zh&=1o&!tr2v6x3m05^(1xyaz9s+6wkz7kvf5jojeh!aee5_bn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
@@ -204,7 +204,7 @@ JAZZMIN_UI_TWEAKS = {
 
 
 MNOTIFY_API_KEY = "PbaAXEQmt7R7i7apnauFMMwFD"
-MNOTIFY_SENDER_ID = "King Of Glory School"  # customize as needed
+MNOTIFY_SENDER_ID = "HOLYWELL"  # customize as needed
 MNOTIFY_URL = "https://api.mnotify.com/api/sms/quick"
 
 
@@ -221,7 +221,7 @@ REST_FRAMEWORK = {
         # other classes if needed
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ],
    
     "DEFAULT_RENDERER_CLASSES": [

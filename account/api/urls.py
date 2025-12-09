@@ -1,5 +1,15 @@
 from django.urls import path
 from .views import UserLoginView, UserLogoutView, ChangePasswordView, PasswordResetView, PasswordResetConfirmView
+from rest_framework.routers import DefaultRouter
+from .views import (
+    UserLoginView, UserLogoutView, ChangePasswordView,
+    PasswordResetView, PasswordResetConfirmView,
+    AdministratorViewSet
+)
+
+router = DefaultRouter()
+router.register(r'api/administrators',AdministratorViewSet, basename='administrators')
+
 
 
 urlpatterns = [
@@ -12,3 +22,5 @@ urlpatterns = [
 
     
 ]
+
+urlpatterns += router.urls

@@ -99,7 +99,11 @@ class StudentFeeRecordViewSet(viewsets.ModelViewSet):
     def unpaid_percentage_by_class(self, request):
         data = (
             self.queryset
-            .values(class_name=F("fee_structure__grade_class__name"))
+            .values(
+                class_name=F("fee_structure__grade_class__name"),
+                academic_year=F("fee_structure__academic_year__name"),
+                term=F("fee_structure__term__name")
+            )
             .annotate(
                 total_students=Count("id"),
                 unpaid_students=Count("id", filter=Q(balance__gt=0)),
@@ -107,9 +111,10 @@ class StudentFeeRecordViewSet(viewsets.ModelViewSet):
             .annotate(
                 unpaid_percentage=(F("unpaid_students") * 100.0) / F("total_students")
             )
-            .order_by("class_name")
+            .order_by("academic_year", "term", "class_name")
         )
         return Response(list(data))
+
 
 
     # 4. Highlight students with partial / overdue balances

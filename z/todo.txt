@@ -1,11 +1,12 @@
-auths
-model the  A B class proper
+
 remove everything kog
 fetch only active student
 remember to change the send email url to the production frontend url
-model and payments for discounted students
-bulk deletes
+
+
 fix all receipts
+check sms... TRY SMS  TO SEE HOLYWELL DONE
+login placeholder as email DONE
 
 principal should create and monitor admins and staff
 

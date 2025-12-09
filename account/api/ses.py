@@ -35,9 +35,44 @@ class UserSerializerForPayments(serializers.ModelSerializer):
         fields = [
             "full_name"
         ]
-    
+class AdministratorSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField()  # Accept email from frontend
 
-        
+    class Meta:
+        model = User
+        fields = [
+            "id",
+            "full_name",
+            "gender",
+            "date_of_birth",
+            "is_active",
+            "role",
+            "password",
+            "email",  # include email
+        ]
+        extra_kwargs = {
+            "role": {"read_only": True},
+            "password": {"write_only": True, "required": False},
+        }
+
+    def create(self, validated_data):
+        email = validated_data.pop("email")  # get email
+        validated_data.pop("user_id", None)  # remove user_id if present
+        validated_data.pop("role", None)     # force role
+        password = validated_data.pop("password", "TempPassword123!")
+
+        user = User.objects.create(
+            user_id=email,
+            email=email,
+            role="administrator",
+            password=password,
+            **validated_data
+        )
+         # Set the password properly
+        user.set_password(password)
+        user.save()
+        return user
+
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -58,6 +93,7 @@ class UserSerializer(serializers.ModelSerializer):
             "is_active",
             "is_staff",
             "date_of_birth",
+            "email",    
 
         ]
 
