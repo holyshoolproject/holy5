@@ -112,20 +112,31 @@ WSGI_APPLICATION = 'A_sms.wsgi.application'
 
 
 
+# settings.py
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'alqofyltnwqgmkterwbt',
+        'USER': 'kcemavbxqomoljagpttq',
+        'PASSWORD': 'bizqlbuznpbcyiutqznmudxkpinnsm',
+        'HOST': '9qasp5v56q8ckkf5dc.leapcellpool.com',
+        'PORT': '6438',
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
 
 
 
 
-
-
 '''
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
+    }
+}
 
 
 
